@@ -6,7 +6,7 @@
 /*   By: tvisenti <tvisenti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/29 14:39:45 by tvisenti          #+#    #+#             */
-/*   Updated: 2017/03/30 14:07:30 by tvisenti         ###   ########.fr       */
+/*   Updated: 2017/03/30 14:31:49 by tvisenti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,15 +16,21 @@
 #include "Contact.class.hpp"
 
 void showContact(Contact *contact, int nbMax) {
-    std::cout << "|   Index  |First Name|Last Name | Nickname |" << std::endl;
+    std::cout << "|     Index|First Name| Last Name|  Nickname|" << std::endl;
     int cur = 0;
     while (cur < nbMax) {
         std::string firstName = contact[cur].firstName;
         firstName.resize(10, ' ');
+        if (firstName[9] != ' ')
+            firstName[9] = '.';
         std::string lastName = contact[cur].lastName;
         lastName.resize(10, ' ');
+        if (lastName[9] != ' ')
+            lastName[9] = '.';
         std::string nickname = contact[cur].nickname;
         nickname.resize(10, ' ');
+        if (nickname[9] != ' ')
+            nickname[9] = '.';
         std::cout << "|    " << cur << "     |" << firstName << "|" << lastName << "|" << nickname << "|" << std::endl;
         cur++;
     }
