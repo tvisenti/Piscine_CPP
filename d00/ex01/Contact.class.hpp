@@ -6,7 +6,7 @@
 /*   By: tvisenti <tvisenti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/30 10:18:21 by tvisenti          #+#    #+#             */
-/*   Updated: 2017/03/30 13:56:34 by tvisenti         ###   ########.fr       */
+/*   Updated: 2017/03/30 17:27:57 by tvisenti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,6 @@
 
 class Contact {
     public:
-
-        int     nb;
         std::string firstName;
         std::string lastName;
         std::string nickname;
@@ -28,7 +26,6 @@ class Contact {
         std::string favoriteMeal;
         std::string underwearColor;
         std::string darkestSecret;
-
 };
 
 #endif
