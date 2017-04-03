@@ -6,7 +6,7 @@
 /*   By: tvisenti <tvisenti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/31 17:59:01 by tvisenti          #+#    #+#             */
-/*   Updated: 2017/03/31 18:07:46 by tvisenti         ###   ########.fr       */
+/*   Updated: 2017/04/03 09:14:30 by tvisenti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,4 @@ void memoryLeak() {
     std::cout << *panthere << std::endl;
     delete panthere;
     return;
-}
-
-int main() {
-    memoryLeak();
-    return (0);
 }
