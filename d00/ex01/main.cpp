@@ -6,7 +6,7 @@
 /*   By: tvisenti <tvisenti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/29 14:39:45 by tvisenti          #+#    #+#             */
-/*   Updated: 2017/03/30 18:18:01 by tvisenti         ###   ########.fr       */
+/*   Updated: 2017/04/03 09:51:06 by tvisenti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,8 @@ void showContactAtIndex(Contact *contact, int nbMax) {
         std::cout << "Please select an index" << std::endl;
         std::string index;
         std::getline(std::cin, index);
-        if (index.length() == 1) {
+        char c = index[0];
+        if (index.length() == 1 && c > 47 && c < 58) {
             int i = stoi(index);
             if (i <= nbMax && i > 0) {
                 i--;
