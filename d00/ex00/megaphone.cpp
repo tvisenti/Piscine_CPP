@@ -6,12 +6,11 @@
 /*   By: tvisenti <tvisenti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/29 11:48:18 by tvisenti          #+#    #+#             */
-/*   Updated: 2017/03/31 11:40:05 by tvisenti         ###   ########.fr       */
+/*   Updated: 2017/04/03 09:57:10 by tvisenti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
-#include <ctype.h>
 
 int main(int argc, char **argv) {
 
