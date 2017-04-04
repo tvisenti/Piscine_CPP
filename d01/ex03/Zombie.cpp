@@ -6,27 +6,13 @@
 /*   By: tvisenti <tvisenti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/03 09:18:00 by tvisenti          #+#    #+#             */
-/*   Updated: 2017/04/04 13:42:05 by tvisenti         ###   ########.fr       */
+/*   Updated: 2017/04/04 14:13:08 by tvisenti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
-Zombie::Zombie(std::string name, std::string type) {
-	this->name = name;
-	this->type = type;
-	std::cout << this->name << " is created" << std::endl;
-    return;
-}
-
-Zombie::Zombie(void) {
-	this->name = "Common";
-	this->type = "Weak";
-    return;
-}
-
-void	Zombie::ZombieInit(std::string name) {
-	this->name = name;
+Zombie::Zombie(void) : name("Common"), type("Weak") {
 	std::cout << this->name << " is created" << std::endl;
     return;
 }
