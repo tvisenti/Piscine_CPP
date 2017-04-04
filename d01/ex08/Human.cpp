@@ -13,17 +13,17 @@
 #include "Human.hpp"
 
 void	Human::meleeAttack(std::string const & target) {
-	std::cout << "meleeAttack" << std::endl;
+	std::cout << "I attack with meleeAttack the target: " << target << std::endl;
 	return;
 }
 
 void	Human::rangedAttack(std::string const & target) {
-	std::cout << "rangedAttack" << std::endl;
+	std::cout << "I attack with rangedAttack the target: " << target << std::endl;
 	return;
 }
 
 void	Human::intimidatingShout(std::string const & target) {
-	std::cout << "intimidatingShout" << std::endl;
+	std::cout << "I attack with intimidatingShout the target: " << target << std::endl;
 	return;
 }
 
@@ -34,9 +34,10 @@ void	Human::action(std::string const & action_name, std::string const & target) 
 
 	for (int i = 0; i < 3; i++) {
 		if (cmp[i] == action_name) {
-			this->(Human::*array[i])(target);
+			(this->*array[i])(target);
 			return;
 		}
 	}
+	std::cout << "Error ! I can't find the func: " << action_name << std::endl;
 	return;
 }
