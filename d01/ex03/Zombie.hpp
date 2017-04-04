@@ -6,12 +6,12 @@
 /*   By: tvisenti <tvisenti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/03 09:18:08 by tvisenti          #+#    #+#             */
-/*   Updated: 2017/04/04 14:13:54 by tvisenti         ###   ########.fr       */
+/*   Updated: 2017/04/04 17:15:16 by tvisenti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ZOMBIE_H
-# define ZOMBIE_H
+#ifndef ZOMBIE_HPP
+# define ZOMBIE_HPP
 # include <iostream>
 
 class Zombie {

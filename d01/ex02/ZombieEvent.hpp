@@ -6,12 +6,12 @@
 /*   By: tvisenti <tvisenti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/03 09:18:16 by tvisenti          #+#    #+#             */
-/*   Updated: 2017/04/04 14:46:14 by tvisenti         ###   ########.fr       */
+/*   Updated: 2017/04/04 17:15:10 by tvisenti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ZOMBIE_EVENT_H
-# define ZOMBIE_EVENT_H
+#ifndef ZOMBIEEVENT_HPP
+# define ZOMBIEEVENT_HPP
 # include "Zombie.hpp"
 
 class ZombieEvent {

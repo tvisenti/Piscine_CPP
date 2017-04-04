@@ -6,12 +6,12 @@
 /*   By: tvisenti <tvisenti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/30 10:18:21 by tvisenti          #+#    #+#             */
-/*   Updated: 2017/04/03 16:58:21 by tvisenti         ###   ########.fr       */
+/*   Updated: 2017/04/04 17:14:36 by tvisenti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CONTACT_CLASS_H
-# define CONTACT_CLASS_H
+#ifndef CONTACT_CLASS_HPP
+# define CONTACT_CLASS_HPP
 
 # include <iostream>
 # include <iomanip>
