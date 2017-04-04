@@ -6,11 +6,10 @@
 /*   By: tvisenti <tvisenti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/03 09:18:00 by tvisenti          #+#    #+#             */
-/*   Updated: 2017/04/03 15:59:08 by tvisenti         ###   ########.fr       */
+/*   Updated: 2017/04/04 13:42:05 by tvisenti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
 #include "Zombie.hpp"
 
 Zombie::Zombie(std::string name, std::string type) {

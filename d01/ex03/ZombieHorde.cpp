@@ -6,11 +6,10 @@
 /*   By: tvisenti <tvisenti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/03 14:47:13 by tvisenti          #+#    #+#             */
-/*   Updated: 2017/04/04 09:57:50 by tvisenti         ###   ########.fr       */
+/*   Updated: 2017/04/04 13:42:15 by tvisenti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
 #include "ZombieHorde.hpp"
 #include "Zombie.hpp"
 

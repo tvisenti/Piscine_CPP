@@ -6,12 +6,11 @@
 /*   By: tvisenti <tvisenti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/31 16:05:13 by tvisenti          #+#    #+#             */
-/*   Updated: 2017/04/04 10:10:58 by tvisenti         ###   ########.fr       */
+/*   Updated: 2017/04/04 13:41:10 by tvisenti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Pony.hpp"
-#include <iostream>
 
 Pony::Pony( const char* name ) {
     std::cout << "Create Pony: " << name << std::endl;

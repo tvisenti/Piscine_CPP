@@ -6,13 +6,12 @@
 /*   By: tvisenti <tvisenti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/03 09:18:16 by tvisenti          #+#    #+#             */
-/*   Updated: 2017/04/03 14:26:51 by tvisenti         ###   ########.fr       */
+/*   Updated: 2017/04/04 13:41:52 by tvisenti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef ZOMBIE_EVENT_H
 # define ZOMBIE_EVENT_H
-# include <iostream>
 # include "Zombie.hpp"
 
 class ZombieEvent {

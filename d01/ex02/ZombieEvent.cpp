@@ -6,11 +6,10 @@
 /*   By: tvisenti <tvisenti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/03 09:18:13 by tvisenti          #+#    #+#             */
-/*   Updated: 2017/04/04 09:57:04 by tvisenti         ###   ########.fr       */
+/*   Updated: 2017/04/04 13:41:46 by tvisenti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
 #include "ZombieEvent.hpp"
 #include "Zombie.hpp"
 
