@@ -6,11 +6,11 @@
 /*   By: tvisenti <tvisenti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/04 08:45:45 by tvisenti          #+#    #+#             */
-/*   Updated: 2017/04/04 11:13:15 by tvisenti         ###   ########.fr       */
+/*   Updated: 2017/04/04 11:38:24 by tvisenti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "iostream"
+#include <iostream>
 #include <fstream>
 #include <sys/stat.h>
 
@@ -41,12 +41,18 @@ void findAndReplace(std::string fullPath, std::string s1, std::string s2, std::s
 	std::ifstream		ifs(fullPath);
 	std::ofstream		ofs(path + ".replace");
 	std::string 		str((std::istreambuf_iterator<char>(ifs)), (std::istreambuf_iterator<char>()));
-	size_t				pos;
+	size_t				pos = 0;
+	int					nbOc = 0;
 
 	ifs.close();
 	while ((pos = str.find(s1)) != std::string::npos) {
 		str.replace(pos, s1.length(), s2);
+		nbOc++;
 	}
+	if (nbOc == 0)
+		std::cout << "No occurence in this file." << std::endl;
+	else
+		std::cout << "I find " << nbOc << " occurences in this file." << std::endl;
 	ofs << str;
 	return;
 }
