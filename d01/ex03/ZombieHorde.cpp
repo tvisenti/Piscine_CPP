@@ -6,7 +6,7 @@
 /*   By: tvisenti <tvisenti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/03 14:47:13 by tvisenti          #+#    #+#             */
-/*   Updated: 2017/04/03 16:37:30 by tvisenti         ###   ########.fr       */
+/*   Updated: 2017/04/04 09:57:50 by tvisenti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,15 +20,7 @@ ZombieHorde::ZombieHorde(int n) {
     this->nbHorde = n;
     this->zombieHorde = new Zombie[20];
 
-    time_t rawtime;
-    struct tm * timeinfo;
-    char buffer [8];
-
-    time (&rawtime);
-    timeinfo = localtime (&rawtime);
-
-    strftime (buffer, 8, "%S", timeinfo);
-    srand(atoi(buffer));
+	srand(time(NULL));
     for (int i = 0; i < 20; i++) {
         this->zombieHorde[i].ZombieInit(zombiesName[rand() % 20]);
     }

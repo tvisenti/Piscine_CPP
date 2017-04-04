@@ -6,7 +6,7 @@
 /*   By: tvisenti <tvisenti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/03 09:18:13 by tvisenti          #+#    #+#             */
-/*   Updated: 2017/04/03 14:34:06 by tvisenti         ###   ########.fr       */
+/*   Updated: 2017/04/04 09:57:04 by tvisenti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,16 +37,7 @@ Zombie* ZombieEvent::newZombie(std::string name) {
 }
 
 Zombie* ZombieEvent::randomChump(void) {
-    time_t rawtime;
-    struct tm * timeinfo;
-    char buffer [8];
-
-    time (&rawtime);
-    timeinfo = localtime (&rawtime);
-
-    strftime (buffer, 8, "%S", timeinfo);
-    srand(atoi(buffer));
-
+    srand(time(NULL));
     Zombie* tmp = new Zombie(zombiesName[rand() % 8], this->type);
     tmp->announce();
     return tmp;
