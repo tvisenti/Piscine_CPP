@@ -6,7 +6,7 @@
 /*   By: tvisenti <tvisenti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/03 09:18:16 by tvisenti          #+#    #+#             */
-/*   Updated: 2017/04/04 13:41:52 by tvisenti         ###   ########.fr       */
+/*   Updated: 2017/04/04 14:46:14 by tvisenti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@ class ZombieEvent {
 		ZombieEvent(void);
 		~ZombieEvent(void);
 
-        void    setZombieType(std::string type);
-        Zombie* newZombie(std::string name);
-        Zombie* randomChump(void);
+        void	setZombieType(std::string type);
+        Zombie*	newZombie(std::string name);
+        Zombie*	randomChump(void);
 
         static std::string zombiesName[8];
         std::string type;

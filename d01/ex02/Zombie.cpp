@@ -6,15 +6,14 @@
 /*   By: tvisenti <tvisenti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/03 09:18:00 by tvisenti          #+#    #+#             */
-/*   Updated: 2017/04/04 13:41:33 by tvisenti         ###   ########.fr       */
+/*   Updated: 2017/04/04 15:03:52 by tvisenti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
-Zombie::Zombie(std::string name, std::string type) : name(name), type(type) {
-
-	std::cout << this->name << " is created" << std::endl;
+Zombie::Zombie(void) : name("DefaultName"), type("DefaultType") {
+	std::cout << "Zombie is created" << std::endl;
     return;
 }
 

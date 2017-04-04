@@ -6,7 +6,7 @@
 /*   By: tvisenti <tvisenti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/03 09:18:13 by tvisenti          #+#    #+#             */
-/*   Updated: 2017/04/04 13:41:46 by tvisenti         ###   ########.fr       */
+/*   Updated: 2017/04/04 14:50:44 by tvisenti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,12 +32,15 @@ void ZombieEvent::setZombieType(std::string type) {
 }
 
 Zombie* ZombieEvent::newZombie(std::string name) {
-    return new Zombie(name, this->type);
+	Zombie* zmb = new Zombie();
+	zmb->name = name;
+	zmb->type = this->type;
+	return zmb;
 }
 
 Zombie* ZombieEvent::randomChump(void) {
     srand(time(NULL));
-    Zombie* tmp = new Zombie(zombiesName[rand() % 8], this->type);
+    Zombie* tmp = this->newZombie(zombiesName[rand() % 8]);
     tmp->announce();
     return tmp;
 }
