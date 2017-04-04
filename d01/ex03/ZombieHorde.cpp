@@ -6,7 +6,7 @@
 /*   By: tvisenti <tvisenti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/03 14:47:13 by tvisenti          #+#    #+#             */
-/*   Updated: 2017/04/04 14:17:35 by tvisenti         ###   ########.fr       */
+/*   Updated: 2017/04/04 14:26:49 by tvisenti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,10 @@
 std::string ZombieHorde::zombiesName[20] = {"Bill", "Zoey", "Francis", "Louis", "Nick", "Coach", "Ellis", "Rochelle", "Tank", "Boomer", "Smoker", "Witch", "Hunter", "Jockey", "Charger", "Spitter", "Common Infected", "Witch crys", "Screamer", "Uncommon Infected"};
 
 ZombieHorde::ZombieHorde(int n) : nbHorde(n) {
-    this->zombieHorde = new Zombie[20];
+    this->zombieHorde = new Zombie[n];
 
 	srand(time(NULL));
-    for (int i = 0; i < 20; i++) {
+    for (int i = 0; i < n; i++) {
         this->zombieHorde[i].name = zombiesName[rand() % 20];
     }
     return;
