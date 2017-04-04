@@ -6,12 +6,10 @@
 /*   By: tvisenti <tvisenti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/29 14:39:45 by tvisenti          #+#    #+#             */
-/*   Updated: 2017/04/03 16:54:21 by tvisenti         ###   ########.fr       */
+/*   Updated: 2017/04/04 13:40:42 by tvisenti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include <iomanip>
 #include "Contact.class.hpp"
 
 int main(void) {
