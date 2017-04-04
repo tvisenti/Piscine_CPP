@@ -6,7 +6,7 @@
 /*   By: tvisenti <tvisenti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/31 16:05:07 by tvisenti          #+#    #+#             */
-/*   Updated: 2017/03/31 17:54:40 by tvisenti         ###   ########.fr       */
+/*   Updated: 2017/04/04 10:11:33 by tvisenti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void   ponyOnTheHeap() {
     Pony*    newPony = new Pony("HEAP");
 
     newPony->name = "HEAP";
-    std::cout << "HEAP eats grass" << std::endl;
+	newPony->anyAction();
     delete newPony;
     return;
 }
@@ -27,7 +27,7 @@ void    ponyOnTheStack() {
     Pony    newPony = Pony("STACK");
 
     newPony.name = "STACK";
-    std::cout << "STACK eats grass" << std::endl;
+	newPony.anyAction();
     return;
 }
 

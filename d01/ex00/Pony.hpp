@@ -6,7 +6,7 @@
 /*   By: tvisenti <tvisenti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/31 16:05:11 by tvisenti          #+#    #+#             */
-/*   Updated: 2017/03/31 17:48:23 by tvisenti         ###   ########.fr       */
+/*   Updated: 2017/04/04 10:07:38 by tvisenti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ class Pony {
         const char *name;
         Pony( const char* name );
         ~Pony( void );
+
+		void	anyAction(void);
 };
 
 #endif

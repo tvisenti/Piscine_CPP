@@ -6,7 +6,7 @@
 /*   By: tvisenti <tvisenti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/31 16:05:13 by tvisenti          #+#    #+#             */
-/*   Updated: 2017/03/31 18:10:23 by tvisenti         ###   ########.fr       */
+/*   Updated: 2017/04/04 10:10:58 by tvisenti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,4 +21,9 @@ Pony::Pony( const char* name ) {
 Pony::~Pony( void ) {
     std::cout << "Destruction Pony: " << this->name << std::endl;
     return;
+}
+
+void	Pony::anyAction(void) {
+	std::cout << this->name << " eats grass" << std::endl;
+	return;
 }
