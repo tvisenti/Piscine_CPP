@@ -6,7 +6,7 @@
 /*   By: tvisenti <tvisenti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/03 09:17:51 by tvisenti          #+#    #+#             */
-/*   Updated: 2017/04/03 14:35:45 by tvisenti         ###   ########.fr       */
+/*   Updated: 2017/04/04 11:52:24 by tvisenti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ int	main() {
 
 	event->setZombieType("random");
 	Zombie* zombie2 = event->randomChump();
+	zombie->announce();
 
 	delete event;
 	delete zombie;

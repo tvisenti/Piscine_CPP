@@ -6,17 +6,15 @@
 /*   By: tvisenti <tvisenti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/03 09:18:00 by tvisenti          #+#    #+#             */
-/*   Updated: 2017/04/03 13:42:11 by tvisenti         ###   ########.fr       */
+/*   Updated: 2017/04/04 11:58:56 by tvisenti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include "Zombie.hpp"
 
-Zombie::Zombie(std::string name, std::string type) {
+Zombie::Zombie(std::string name, std::string type) : name(name), type(type) {
 
-	this->name = name;
-	this->type = type;
 	std::cout << this->name << " is created" << std::endl;
     return;
 }
