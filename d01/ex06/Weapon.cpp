@@ -6,7 +6,7 @@
 /*   By: tvisenti <tvisenti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/03 18:14:57 by tvisenti          #+#    #+#             */
-/*   Updated: 2017/04/03 19:21:49 by tvisenti         ###   ########.fr       */
+/*   Updated: 2017/04/04 09:47:18 by tvisenti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ Weapon::Weapon(std::string type) {
 }
 
 Weapon::~Weapon(void) {
+	std::cout << "Weapon is deleted of type " << this->type << std::endl;
 	return;
 }
 

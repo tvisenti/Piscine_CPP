@@ -6,7 +6,7 @@
 /*   By: tvisenti <tvisenti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/03 18:16:08 by tvisenti          #+#    #+#             */
-/*   Updated: 2017/04/03 19:24:12 by tvisenti         ###   ########.fr       */
+/*   Updated: 2017/04/04 08:43:50 by tvisenti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,10 +31,3 @@ int main() {
 		jim.attack();
 	}
 }
-
-// int	main() {
-// 	Weapon* weapon = new Weapon("Revolver");
-// 	weapon->setType("Epee");
-// 	weapon->getType();
-// 	return (0);
-// }
