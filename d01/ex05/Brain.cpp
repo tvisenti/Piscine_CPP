@@ -6,7 +6,7 @@
 /*   By: tvisenti <tvisenti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/03 17:08:01 by tvisenti          #+#    #+#             */
-/*   Updated: 2017/04/03 17:51:49 by tvisenti         ###   ########.fr       */
+/*   Updated: 2017/04/04 15:56:16 by tvisenti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ Brain::~Brain(void) {
 	return;
 }
 
-std::string Brain::identify(void) {
+std::string Brain::identify(void) const {
 	std::stringstream address;
 	address << this;
 	std::cout << "Brain is identified" << std::endl;

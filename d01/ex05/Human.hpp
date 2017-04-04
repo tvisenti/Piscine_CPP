@@ -6,7 +6,7 @@
 /*   By: tvisenti <tvisenti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/03 17:07:54 by tvisenti          #+#    #+#             */
-/*   Updated: 2017/04/04 13:42:43 by tvisenti         ###   ########.fr       */
+/*   Updated: 2017/04/04 15:53:35 by tvisenti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,9 @@ class Human {
 	public:
 		Human(void);
 		~Human(void);
-		Brain brain;
+		const Brain brain;
 
-		Brain&	getBrain(void);
+		const Brain	&getBrain(void);
 		std::string	identify(void);
 };
 

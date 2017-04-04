@@ -6,7 +6,7 @@
 /*   By: tvisenti <tvisenti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/03 17:07:59 by tvisenti          #+#    #+#             */
-/*   Updated: 2017/04/03 17:43:23 by tvisenti         ###   ########.fr       */
+/*   Updated: 2017/04/04 15:56:23 by tvisenti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ class Brain {
 		Brain(void);
 		~Brain(void);
 
-		std::string	identify(void);
+		std::string	identify(void) const;
 };
 
 #endif

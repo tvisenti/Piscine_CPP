@@ -6,7 +6,7 @@
 /*   By: tvisenti <tvisenti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/03 17:07:56 by tvisenti          #+#    #+#             */
-/*   Updated: 2017/04/03 18:10:50 by tvisenti         ###   ########.fr       */
+/*   Updated: 2017/04/04 15:55:43 by tvisenti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ Human::~Human(void) {
 	return;
 }
 
-Brain&	Human::getBrain(void) {
+const Brain	&Human::getBrain(void) {
 	return (this->brain);
 }
 
