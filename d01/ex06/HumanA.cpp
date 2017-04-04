@@ -6,16 +6,14 @@
 /*   By: tvisenti <tvisenti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/03 18:15:25 by tvisenti          #+#    #+#             */
-/*   Updated: 2017/04/04 09:44:19 by tvisenti         ###   ########.fr       */
+/*   Updated: 2017/04/04 18:24:43 by tvisenti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "HumanA.hpp"
 
-HumanA::HumanA(std::string name, Weapon& weapon) : weapon(weapon) {
+HumanA::HumanA(std::string name, Weapon& weapon) : name(name), weapon(weapon) {
 	std::cout << "HumanA is created and he's called " << name << std::endl;
-	this->name = name;
-	this->weapon = weapon;
 	return;
 }
 
