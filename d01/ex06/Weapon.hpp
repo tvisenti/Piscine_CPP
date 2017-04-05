@@ -6,7 +6,7 @@
 /*   By: tvisenti <tvisenti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/03 18:15:06 by tvisenti          #+#    #+#             */
-/*   Updated: 2017/04/04 17:17:03 by tvisenti         ###   ########.fr       */
+/*   Updated: 2017/04/05 14:04:25 by tvisenti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,8 @@ class Weapon {
 		std::string	getType(void) const;
 		void		setType(std::string type);
 
-		std::string	type;
+	private:
+		std::string	_type;
 };
 
 #endif

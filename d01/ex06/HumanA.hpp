@@ -6,7 +6,7 @@
 /*   By: tvisenti <tvisenti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/03 18:15:33 by tvisenti          #+#    #+#             */
-/*   Updated: 2017/04/04 17:16:53 by tvisenti         ###   ########.fr       */
+/*   Updated: 2017/04/05 14:02:33 by tvisenti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,11 @@ class HumanA {
 		HumanA(std::string name, Weapon& weapon);
 		~HumanA(void);
 
-		void	attack(void);
+		void	attack(void) const;
 
-		std::string	name;
-		Weapon&	weapon;
+	private:
+		std::string	_name;
+		Weapon&		_weapon;
 };
 
 #endif

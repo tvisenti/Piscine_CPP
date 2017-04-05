@@ -6,15 +6,14 @@
 /*   By: tvisenti <tvisenti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/03 18:15:49 by tvisenti          #+#    #+#             */
-/*   Updated: 2017/04/04 18:41:36 by tvisenti         ###   ########.fr       */
+/*   Updated: 2017/04/05 14:03:33 by tvisenti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "HumanB.hpp"
 
-HumanB::HumanB(std::string name) {
+HumanB::HumanB(std::string name) : _name(name) {
 	std::cout << "HumanB is created and he's called " << name << std::endl;
-	this->name = name;
 	return;
 }
 
@@ -23,13 +22,13 @@ HumanB::~HumanB(void) {
 	return;
 }
 
-void	HumanB::attack() {
-	std::cout << this->name << " attacks with his " << this->weapon->type << std::endl;
+void	HumanB::attack() const {
+	std::cout << this->_name << " attacks with his " << this->_weapon->getType() << std::endl;
 	return;
 }
 
 void	HumanB::setWeapon(Weapon &weapon) {
-	std::cout << "SetWeapon: " << weapon.type << std::endl;
-	this->weapon = &weapon;
+	std::cout << "SetWeapon: " << weapon.getType() << std::endl;
+	this->_weapon = &weapon;
 	return;
 }
