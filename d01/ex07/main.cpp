@@ -6,7 +6,7 @@
 /*   By: tvisenti <tvisenti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/04 08:45:45 by tvisenti          #+#    #+#             */
-/*   Updated: 2017/04/05 14:41:33 by tvisenti         ###   ########.fr       */
+/*   Updated: 2017/04/05 15:24:18 by tvisenti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@ void findAndReplace(std::string fullPath, std::string s1, std::string s2, std::s
 		pathMaj += (char)toupper(path[i]);
 	}
 	if (ifs.fail() || str.length() == 0) {
+		ifs.close();
 		std::cout << "Give me a file, not a directory or empty file!" << std::endl;
 		return;
 	}
@@ -48,6 +49,7 @@ void findAndReplace(std::string fullPath, std::string s1, std::string s2, std::s
 	else
 		std::cout << "I find " << nbOc << " occurences in this file." << std::endl;
 	ofs << str;
+	ofs.close();
 	return;
 }
 
