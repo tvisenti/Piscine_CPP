@@ -15,6 +15,9 @@
 int main() {
 	Human* human;
 
-	human->action("meleeAttack", "test");
+	human->action("meleeAttack", "First");
+	human->action("Autres", "Second");
+	human->action("rangedAttack", "Third");
+	human->action("intimidatingShout", "First");
 	return (0);
 }
