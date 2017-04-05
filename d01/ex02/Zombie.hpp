@@ -6,7 +6,7 @@
 /*   By: tvisenti <tvisenti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/03 09:18:08 by tvisenti          #+#    #+#             */
-/*   Updated: 2017/04/05 13:22:02 by tvisenti         ###   ########.fr       */
+/*   Updated: 2017/04/05 18:18:38 by tvisenti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,8 @@ class Zombie {
 		void		setZombieType(std::string type);
 
 	private:
-		std::string	_type;
 		std::string	_name;
+		std::string	_type;
 };
 
 #endif
