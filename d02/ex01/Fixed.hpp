@@ -6,7 +6,7 @@
 /*   By: tvisenti <tvisenti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/05 14:25:59 by tvisenti          #+#    #+#             */
-/*   Updated: 2017/04/05 19:58:54 by tvisenti         ###   ########.fr       */
+/*   Updated: 2017/04/05 21:03:49 by tvisenti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,8 @@ class Fixed {
 		int		toInt(void) const;
 
 	private:
+		int		_myPow(const int n) const;
+
 		int		_raw;
 		static const int	_fBit = 8;
 };
