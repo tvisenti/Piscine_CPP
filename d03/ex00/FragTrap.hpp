@@ -6,7 +6,7 @@
 /*   By: tvisenti <tvisenti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/06 09:13:48 by tvisenti          #+#    #+#             */
-/*   Updated: 2017/04/06 15:45:45 by tvisenti         ###   ########.fr       */
+/*   Updated: 2017/04/06 17:49:05 by tvisenti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ class FragTrap {
 	public:
 		FragTrap(std::string name);
 		~FragTrap(void);
+
+		FragTrap&	operator=(FragTrap const & rhs);
 
 		void	rangedAttack(std::string const & target) const;
 		void	meleeAttack(std::string const & target) const;
@@ -35,10 +37,12 @@ class FragTrap {
 
 	private:
 		FragTrap(void);
+		void	log(void) const;
 
 		unsigned int	_hitPoints;
 		unsigned int	_maxHitPoints;
 		unsigned int	_energyPoints;
+		unsigned int	_maxEnergyPoints;
 		unsigned int	_level;
 		std::string		_name;
 		unsigned int	_meleeAttackDamage;
