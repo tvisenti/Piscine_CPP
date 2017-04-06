@@ -6,13 +6,13 @@
 /*   By: tvisenti <tvisenti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/06 09:13:50 by tvisenti          #+#    #+#             */
-/*   Updated: 2017/04/06 22:20:37 by tvisenti         ###   ########.fr       */
+/*   Updated: 2017/04/06 23:19:09 by tvisenti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "FragTrap.hpp"
 
-FragTrap::FragTrap(std::string name) : ClapTrap(name, "FR4G-TP"), _name(name) {
+FragTrap::FragTrap(std::string name) : ClapTrap(name, "FR4G-TP") {
 	this->initTrap();
 	this->log();
 	std::cout << name <<  " Directive one: Protect humanity! Directive two: Obey X-Niel at all costs. Directive three: Dance!" << std::endl;

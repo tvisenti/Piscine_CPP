@@ -6,13 +6,13 @@
 /*   By: tvisenti <tvisenti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/06 16:47:36 by tvisenti          #+#    #+#             */
-/*   Updated: 2017/04/06 22:20:46 by tvisenti         ###   ########.fr       */
+/*   Updated: 2017/04/06 23:19:19 by tvisenti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScavTrap.hpp"
 
-ScavTrap::ScavTrap(std::string name) : ClapTrap(name, "SC4V-TP"), _name(name) {
+ScavTrap::ScavTrap(std::string name) : ClapTrap(name, "SC4V-TP") {
 	this->initTrap();
 	this->log();
 	std::cout << name <<  " :'This time it'll be awesome, I promise!'" << std::endl;

@@ -6,7 +6,7 @@
 /*   By: tvisenti <tvisenti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/06 09:13:48 by tvisenti          #+#    #+#             */
-/*   Updated: 2017/04/06 20:31:11 by tvisenti         ###   ########.fr       */
+/*   Updated: 2017/04/06 23:17:50 by tvisenti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,22 +29,6 @@ class FragTrap : public ClapTrap  {
 		FragTrap(void);
 		void	log(void) const;
 		void	initTrap(void);
-
-		unsigned int	_hitPoints;
-		unsigned int	_maxHitPoints;
-		unsigned int	_energyPoints;
-		unsigned int	_maxEnergyPoints;
-		unsigned int	_level;
-		std::string		_name;
-		unsigned int	_meleeAttackDamage;
-		unsigned int	_rangedAttackDamage;
-		unsigned int	_armorDamageReduction;
-
-		unsigned int	_stoneAttackDamage;
-		unsigned int	_spoonAttackDamage;
-		unsigned int	_chainsawPlasmaDeathMortalAttackDamage;
-		unsigned int	_stabInTheBackAttackDamage;
-		unsigned int	_kamehamehaAttackDamage;
 
 };
 

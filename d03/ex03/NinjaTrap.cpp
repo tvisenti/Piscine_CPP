@@ -6,13 +6,13 @@
 /*   By: tvisenti <tvisenti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/06 21:51:21 by tvisenti          #+#    #+#             */
-/*   Updated: 2017/04/06 23:09:55 by tvisenti         ###   ########.fr       */
+/*   Updated: 2017/04/06 23:19:15 by tvisenti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "NinjaTrap.hpp"
 
-NinjaTrap::NinjaTrap(std::string name) : ClapTrap(name, "NI4J-TP"), _name(name) {
+NinjaTrap::NinjaTrap(std::string name) : ClapTrap(name, "NI4J-TP") {
 	this->initTrap();
 	this->log();
 	std::cout << name <<  " :'Hi guys, it's me Mar... nooooo I'm a ninja yo.'" << std::endl;

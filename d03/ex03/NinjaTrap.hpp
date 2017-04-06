@@ -6,7 +6,7 @@
 /*   By: tvisenti <tvisenti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/06 21:51:33 by tvisenti          #+#    #+#             */
-/*   Updated: 2017/04/06 22:46:38 by tvisenti         ###   ########.fr       */
+/*   Updated: 2017/04/06 23:17:30 by tvisenti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,22 +34,6 @@ class NinjaTrap : public ClapTrap {
 		NinjaTrap(void);
 		void	log(void) const;
 		void	initTrap(void);
-
-		unsigned int	_hitPoints;
-		unsigned int	_maxHitPoints;
-		unsigned int	_energyPoints;
-		unsigned int	_maxEnergyPoints;
-		unsigned int	_level;
-		std::string		_name;
-		unsigned int	_meleeAttackDamage;
-		unsigned int	_rangedAttackDamage;
-		unsigned int	_armorDamageReduction;
-
-		unsigned int	_stoneAttackDamage;
-		unsigned int	_spoonAttackDamage;
-		unsigned int	_chainsawPlasmaDeathMortalAttackDamage;
-		unsigned int	_stabInTheBackAttackDamage;
-		unsigned int	_kamehamehaAttackDamage;
 
 };
 
