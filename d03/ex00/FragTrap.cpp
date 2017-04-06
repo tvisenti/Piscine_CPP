@@ -6,7 +6,7 @@
 /*   By: tvisenti <tvisenti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/06 09:13:50 by tvisenti          #+#    #+#             */
-/*   Updated: 2017/04/06 20:19:12 by tvisenti         ###   ########.fr       */
+/*   Updated: 2017/04/06 22:20:25 by tvisenti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,7 @@ FragTrap&	FragTrap::operator=(FragTrap const & rhs) {
 	if (this != &rhs) {
 		this->log();
 		std::cout << this->_name << " copies the attributes of " << rhs._name;
+		this->_name = rhs._name;
 		this->_hitPoints = rhs._hitPoints;
         this->_maxHitPoints = rhs._maxHitPoints;
         this->_energyPoints = rhs._energyPoints;

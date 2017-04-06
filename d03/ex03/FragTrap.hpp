@@ -1,46 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ClapTrap.hpp                                       :+:      :+:    :+:   */
+/*   FragTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tvisenti <tvisenti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/04/06 19:15:26 by tvisenti          #+#    #+#             */
-/*   Updated: 2017/04/06 22:16:05 by tvisenti         ###   ########.fr       */
+/*   Created: 2017/04/06 09:13:48 by tvisenti          #+#    #+#             */
+/*   Updated: 2017/04/06 20:31:11 by tvisenti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CLAPTRAP_HPP
-# define CLAPTRAP_HPP
+#ifndef FRAGTRAP_HPP
+# define FRAGTRAP_HPP
 # include <iostream>
+# include "ClapTrap.hpp"
 
-class ClapTrap {
+class FragTrap : public ClapTrap  {
 	public:
-		ClapTrap(std::string name, std::string log);
-		~ClapTrap(void);
-		ClapTrap(ClapTrap const & src);
+		FragTrap(std::string name);
+		~FragTrap(void);
+		FragTrap(FragTrap const & src);
 
-		ClapTrap&	operator=(ClapTrap const & rhs);
+		FragTrap&	operator=(FragTrap const & rhs);
 
-		void	initTrap(void);
-		void	log(void) const;
-
-		void	rangedAttack(std::string const & target) const;
-		void	meleeAttack(std::string const & target) const;
-
-		void	stoneAttack(std::string const & target) const;
-		void	spoonAttack(std::string const & target) const;
-		void	chainsawPlasmaDeathMortalAttack(std::string const & target) const;
-		void	stabInTheBackAttack(std::string const & target) const;
-		void	kamehamehaAttack(std::string const & target) const;
-
-		void	takeDamage(unsigned int amount);
-		void	beRepaired(unsigned int amount);
+		void	vaulthunter_dot_exe(std::string const & target);
 
 	private:
-		ClapTrap(void);
+		FragTrap(void);
+		void	log(void) const;
+		void	initTrap(void);
 
-	protected:
 		unsigned int	_hitPoints;
 		unsigned int	_maxHitPoints;
 		unsigned int	_energyPoints;
@@ -56,8 +45,6 @@ class ClapTrap {
 		unsigned int	_chainsawPlasmaDeathMortalAttackDamage;
 		unsigned int	_stabInTheBackAttackDamage;
 		unsigned int	_kamehamehaAttackDamage;
-
-		std::string		_log;
 
 };
 

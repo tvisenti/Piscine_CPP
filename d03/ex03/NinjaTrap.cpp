@@ -1,36 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ScavTrap.cpp                                       :+:      :+:    :+:   */
+/*   NinjaTrap.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tvisenti <tvisenti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/04/06 16:47:36 by tvisenti          #+#    #+#             */
-/*   Updated: 2017/04/06 22:19:44 by tvisenti         ###   ########.fr       */
+/*   Created: 2017/04/06 21:51:21 by tvisenti          #+#    #+#             */
+/*   Updated: 2017/04/06 22:20:42 by tvisenti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ScavTrap.hpp"
+#include "NinjaTrap.hpp"
 
-ScavTrap::ScavTrap(std::string name) : ClapTrap(name, "SC4V-TP") {
+NinjaTrap::NinjaTrap(std::string name) : ClapTrap(name, "NI4J-TP"), _name(name) {
 	this->initTrap();
 	this->log();
 	std::cout << name <<  " :'This time it'll be awesome, I promise!'" << std::endl;
 	return;
 }
 
-ScavTrap::~ScavTrap(void) {
+NinjaTrap::~NinjaTrap(void) {
 	this->log();
 	std::cout << this->_name << " :'I'll stop talking when I'm dead! Oops I'm dead!'" << std::endl;
 	return;
 }
 
-ScavTrap::ScavTrap(ScavTrap const & src) : ClapTrap(src) {
+NinjaTrap::NinjaTrap(NinjaTrap const & src) : ClapTrap(src) {
 	*this = src;
 	return;
 }
 
-ScavTrap&	ScavTrap::operator=(ScavTrap const & rhs) {
+NinjaTrap&	NinjaTrap::operator=(NinjaTrap const & rhs) {
 	if (this != &rhs) {
 		this->log();
 		std::cout << this->_name << " copies the attributes of " << rhs._name;
@@ -52,23 +52,23 @@ ScavTrap&	ScavTrap::operator=(ScavTrap const & rhs) {
 	return *this;
 }
 
-void	ScavTrap::initTrap(void) {
-	this->_hitPoints = 100;
-	this->_maxHitPoints = 100;
-	this->_energyPoints = 50;
-	this->_maxEnergyPoints = 50;
+void	NinjaTrap::initTrap(void) {
+	this->_hitPoints = 60;
+	this->_maxHitPoints = 60;
+	this->_energyPoints = 120;
+	this->_maxEnergyPoints = 120;
 	this->_level = 1;
-	this->_meleeAttackDamage = 20;
-	this->_rangedAttackDamage = 15;
-	this->_armorDamageReduction = 3;
-	this->_stoneAttackDamage = 11;
-	this->_spoonAttackDamage = 98;
-	this->_chainsawPlasmaDeathMortalAttackDamage = 77;
-	this->_stabInTheBackAttackDamage = 42;
-	this->_kamehamehaAttackDamage = 21;
+	this->_meleeAttackDamage = 60;
+	this->_rangedAttackDamage = 5;
+	this->_armorDamageReduction = 0;
+	this->_stoneAttackDamage = 88;
+	this->_spoonAttackDamage = 12;
+	this->_chainsawPlasmaDeathMortalAttackDamage = 1;
+	this->_stabInTheBackAttackDamage = 99;
+	this->_kamehamehaAttackDamage = 9;
 }
 
-void	ScavTrap::challengeNewcomer(std::string const & target) {
+void	NinjaTrap::ninjaShoebox(std::string const & target) {
 	this->log();
 	std::string array[5] = {"Look at me! I'm dancing! I'm dancing! Can you do that?", "Can't you wait 2 seconds?", "Let's do a Rock - Paper - Scissors", "Spell my name backwards", "Kiss my wheel"};
 	if (this->_hitPoints == 0) {
@@ -80,7 +80,7 @@ void	ScavTrap::challengeNewcomer(std::string const & target) {
 	return;
 }
 
-void	ScavTrap::log(void) const {
+void	NinjaTrap::log(void) const {
 	std::cout << "SC4V-TP ";
 	return;
 }

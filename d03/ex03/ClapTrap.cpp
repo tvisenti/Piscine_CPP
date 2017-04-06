@@ -1,41 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ScavTrap.cpp                                       :+:      :+:    :+:   */
+/*   ClapTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tvisenti <tvisenti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/04/06 16:47:36 by tvisenti          #+#    #+#             */
-/*   Updated: 2017/04/06 22:20:11 by tvisenti         ###   ########.fr       */
+/*   Created: 2017/04/06 19:15:17 by tvisenti          #+#    #+#             */
+/*   Updated: 2017/04/06 22:20:33 by tvisenti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "ClapTrap.hpp"
 
-#include "ScavTrap.hpp"
-
-ScavTrap::ScavTrap(std::string name) : _hitPoints(100), _maxHitPoints(100), _energyPoints(50), _maxEnergyPoints(50),
-_level(1), _name(name), _meleeAttackDamage(20), _rangedAttackDamage(15), _armorDamageReduction(3),
-_stoneAttackDamage(11), _spoonAttackDamage(98), _chainsawPlasmaDeathMortalAttackDamage(77), _stabInTheBackAttackDamage(42), _kamehamehaAttackDamage(21) {
-	this->log();
-	std::cout << name <<  " :'This time it'll be awesome, I promise!'" << std::endl;
+ClapTrap::ClapTrap(std::string name, std::string log) : _name(name), _log(log) {
+	std::cout << "CL4P-TR " << name <<  " Create Master ClapTrap" << std::endl;
 	return;
 }
 
-ScavTrap::~ScavTrap(void) {
-	this->log();
-	std::cout << this->_name << " :'I'll stop talking when I'm dead! Oops I'm dead!'" << std::endl;
+ClapTrap::~ClapTrap(void) {
+	std::cout << "CL4P-TR " << this->_name << " :'Destroy Master ClapTrap'" << std::endl;
 	return;
 }
 
-ScavTrap::ScavTrap(ScavTrap const & src) {
+ClapTrap::ClapTrap(ClapTrap const & src) {
 	*this = src;
 	return;
 }
 
-ScavTrap&	ScavTrap::operator=(ScavTrap const & rhs) {
+ClapTrap&	ClapTrap::operator=(ClapTrap const & rhs) {
 	if (this != &rhs) {
-		this->log();
-		std::cout << this->_name << " copies the attributes of " << rhs._name;
+		std::cout << "CL4P-TR " << this->_name << " copies the attributes of " << rhs._name;
 		this->_name = rhs._name;
 		this->_hitPoints = rhs._hitPoints;
         this->_maxHitPoints = rhs._maxHitPoints;
@@ -54,8 +48,28 @@ ScavTrap&	ScavTrap::operator=(ScavTrap const & rhs) {
 	return *this;
 }
 
-void	ScavTrap::rangedAttack(std::string const & target) const {
-	this->log();
+void	ClapTrap::initTrap(void) {
+	this->_hitPoints = 100;
+	this->_maxHitPoints = 100;
+	this->_energyPoints = 100;
+	this->_maxEnergyPoints = 100;
+	this->_level = 1;
+	this->_meleeAttackDamage = 10;
+	this->_rangedAttackDamage = 5;
+	this->_armorDamageReduction = 0;
+	this->_stoneAttackDamage = 5;
+	this->_spoonAttackDamage = 99;
+	this->_chainsawPlasmaDeathMortalAttackDamage = 6;
+	this->_stabInTheBackAttackDamage = 21;
+	this->_kamehamehaAttackDamage = 42;
+}
+
+void	ClapTrap::log(void) const {
+	std::cout << this->_log << " ";
+}
+
+void	ClapTrap::rangedAttack(std::string const & target) const {
+	log();
 	if (this->_hitPoints == 0) {
 		std::cout << this->_name << " :'I can't fight if I'm dead... PLEASE FIX ME'" << std::endl;
 	} else if (this->_energyPoints == 0) {
@@ -66,8 +80,8 @@ void	ScavTrap::rangedAttack(std::string const & target) const {
 	return;
 }
 
-void	ScavTrap::meleeAttack(std::string const & target) const {
-	this->log();
+void	ClapTrap::meleeAttack(std::string const & target) const {
+	log();
 	if (this->_hitPoints == 0) {
 		std::cout << this->_name << " :'I can't fight if I'm dead... PLEASE FIX ME'" << std::endl;
 	} else if (this->_energyPoints == 0) {
@@ -78,8 +92,8 @@ void	ScavTrap::meleeAttack(std::string const & target) const {
 	return;
 }
 
-void	ScavTrap::stoneAttack(std::string const & target) const {
-	this->log();
+void	ClapTrap::stoneAttack(std::string const & target) const {
+	log();
 	if (this->_hitPoints == 0) {
 		std::cout << this->_name << " :'I can't fight if I'm dead... PLEASE FIX ME'" << std::endl;
 	} else if (this->_energyPoints == 0) {
@@ -90,8 +104,8 @@ void	ScavTrap::stoneAttack(std::string const & target) const {
 	return;
 }
 
-void	ScavTrap::spoonAttack(std::string const & target) const {
-	this->log();
+void	ClapTrap::spoonAttack(std::string const & target) const {
+	log();
 	if (this->_hitPoints == 0) {
 		std::cout << this->_name << " :'I can't fight if I'm dead... PLEASE FIX ME'" << std::endl;
 	} else if (this->_energyPoints == 0) {
@@ -102,8 +116,8 @@ void	ScavTrap::spoonAttack(std::string const & target) const {
 	return;
 }
 
-void	ScavTrap::chainsawPlasmaDeathMortalAttack(std::string const & target) const {
-	this->log();
+void	ClapTrap::chainsawPlasmaDeathMortalAttack(std::string const & target) const {
+	log();
 	if (this->_hitPoints == 0) {
 		std::cout << this->_name << " :'I can't fight if I'm dead... PLEASE FIX ME'" << std::endl;
 	} else if (this->_energyPoints == 0) {
@@ -114,8 +128,8 @@ void	ScavTrap::chainsawPlasmaDeathMortalAttack(std::string const & target) const
 	return;
 }
 
-void	ScavTrap::stabInTheBackAttack(std::string const & target) const {
-	this->log();
+void	ClapTrap::stabInTheBackAttack(std::string const & target) const {
+	log();
 	if (this->_hitPoints == 0) {
 		std::cout << this->_name << " :'I can't fight if I'm dead... PLEASE FIX ME'" << std::endl;
 	} else if (this->_energyPoints == 0) {
@@ -126,8 +140,8 @@ void	ScavTrap::stabInTheBackAttack(std::string const & target) const {
 	return;
 }
 
-void	ScavTrap::kamehamehaAttack(std::string const & target) const {
-	this->log();
+void	ClapTrap::kamehamehaAttack(std::string const & target) const {
+	log();
 	if (this->_hitPoints == 0) {
 		std::cout << this->_name << " :'I can't fight if I'm dead... PLEASE FIX ME'" << std::endl;
 	} else if (this->_energyPoints == 0) {
@@ -138,8 +152,8 @@ void	ScavTrap::kamehamehaAttack(std::string const & target) const {
 	return;
 }
 
-void	ScavTrap::takeDamage(unsigned int amount) {
-	this->log();
+void	ClapTrap::takeDamage(unsigned int amount) {
+	log();
 	if (this->_hitPoints > 0) {
 		if (amount < this->_armorDamageReduction) {
 			std::cout << this->_name << " takes " << amount << " damages, new life is " << this->_hitPoints << " !" << std::endl;
@@ -150,10 +164,8 @@ void	ScavTrap::takeDamage(unsigned int amount) {
 		 	else
 				this->_hitPoints -= newAmount;
 			std::cout << this->_name << " takes only " << newAmount << " damages because he blocks " << this->_armorDamageReduction << " with his superArmorDamageReduction, new life is " << this->_hitPoints << " !" << std::endl;
-			if (this->_hitPoints == 0) {
-				this->log();
+			if (this->_hitPoints == 0)
 				std::cout << this->_name << " is dead, but he fought well." << std::endl;
-			}
 		}
 	} else {
 		std::cout << this->_name << " is still dead." << std::endl;
@@ -161,8 +173,8 @@ void	ScavTrap::takeDamage(unsigned int amount) {
 	return;
 }
 
-void	ScavTrap::beRepaired(unsigned int amount) {
-	this->log();
+void	ClapTrap::beRepaired(unsigned int amount) {
+	log();
 	if (this->_hitPoints + amount >= 100) {
 		this->_hitPoints = this->_maxHitPoints;
 		std::cout << this->_name << " repairs all my beautiful body and his new life is 100 !" << std::endl;
@@ -170,22 +182,5 @@ void	ScavTrap::beRepaired(unsigned int amount) {
 		this->_hitPoints += amount;
 		std::cout << this->_name << " repairs " << amount << ", new life is " << this->_hitPoints << " !" << std::endl;
 	}
-	return;
-}
-
-void	ScavTrap::challengeNewcomer(std::string const & target) {
-	this->log();
-	std::string array[5] = {"Look at me! I'm dancing! I'm dancing! Can you do that?", "Can't you wait 2 seconds?", "Let's do a Rock - Paper - Scissors", "Spell my name backwards", "Kiss my wheel"};
-	if (this->_hitPoints == 0) {
-		std::cout << this->_name << " :'I can't challenge if I'm dead... PLEASE FIX ME'" << std::endl;
-	} else {
-		std::string	toPrint = array[rand() % 5];
-		std::cout << this->_name << " challenges the famous " << target << " to do : '" << toPrint << "'!" << std::endl;
-	}
-	return;
-}
-
-void	ScavTrap::log(void) const {
-	std::cout << "SC4V-TP ";
 	return;
 }

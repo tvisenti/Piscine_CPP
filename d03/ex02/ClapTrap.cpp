@@ -6,7 +6,7 @@
 /*   By: tvisenti <tvisenti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/06 19:15:17 by tvisenti          #+#    #+#             */
-/*   Updated: 2017/04/06 21:29:06 by tvisenti         ###   ########.fr       */
+/*   Updated: 2017/04/06 22:23:57 by tvisenti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ ClapTrap::ClapTrap(ClapTrap const & src) {
 ClapTrap&	ClapTrap::operator=(ClapTrap const & rhs) {
 	if (this != &rhs) {
 		std::cout << "CL4P-TR " << this->_name << " copies the attributes of " << rhs._name;
+		this->_name = rhs._name;
 		this->_hitPoints = rhs._hitPoints;
         this->_maxHitPoints = rhs._maxHitPoints;
         this->_energyPoints = rhs._energyPoints;
@@ -163,8 +164,10 @@ void	ClapTrap::takeDamage(unsigned int amount) {
 		 	else
 				this->_hitPoints -= newAmount;
 			std::cout << this->_name << " takes only " << newAmount << " damages because he blocks " << this->_armorDamageReduction << " with his superArmorDamageReduction, new life is " << this->_hitPoints << " !" << std::endl;
-			if (this->_hitPoints == 0)
+			if (this->_hitPoints == 0) {
+				log();
 				std::cout << this->_name << " is dead, but he fought well." << std::endl;
+			}
 		}
 	} else {
 		std::cout << this->_name << " is still dead." << std::endl;
