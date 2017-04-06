@@ -6,7 +6,7 @@
 /*   By: tvisenti <tvisenti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/06 16:47:34 by tvisenti          #+#    #+#             */
-/*   Updated: 2017/04/06 19:07:46 by tvisenti         ###   ########.fr       */
+/*   Updated: 2017/04/06 20:19:13 by tvisenti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@ class ScavTrap {
 	public:
 		ScavTrap(std::string name);
 		~ScavTrap(void);
+		ScavTrap(ScavTrap const & src);
 
 		ScavTrap&	operator=(ScavTrap const & rhs);
 

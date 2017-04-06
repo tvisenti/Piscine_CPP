@@ -6,7 +6,7 @@
 /*   By: tvisenti <tvisenti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/06 16:47:36 by tvisenti          #+#    #+#             */
-/*   Updated: 2017/04/06 19:05:26 by tvisenti         ###   ########.fr       */
+/*   Updated: 2017/04/06 20:19:13 by tvisenti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,11 @@ ScavTrap::~ScavTrap(void) {
 	return;
 }
 
+ScavTrap::ScavTrap(ScavTrap const & src) {
+	*this = src;
+	return;
+}
+
 ScavTrap&	ScavTrap::operator=(ScavTrap const & rhs) {
 	if (this != &rhs) {
 		this->log();
@@ -39,6 +44,11 @@ ScavTrap&	ScavTrap::operator=(ScavTrap const & rhs) {
         this->_meleeAttackDamage = rhs._meleeAttackDamage;
         this->_rangedAttackDamage = rhs._rangedAttackDamage;
         this->_armorDamageReduction = rhs._armorDamageReduction;
+		this->_stoneAttackDamage = rhs._stoneAttackDamage;
+		this->_spoonAttackDamage = rhs._spoonAttackDamage;
+		this->_chainsawPlasmaDeathMortalAttackDamage = rhs._chainsawPlasmaDeathMortalAttackDamage;
+		this->_stabInTheBackAttackDamage = rhs._stabInTheBackAttackDamage;
+		this->_kamehamehaAttackDamage = rhs._kamehamehaAttackDamage;
 	}
 	return *this;
 }

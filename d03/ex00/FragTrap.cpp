@@ -6,7 +6,7 @@
 /*   By: tvisenti <tvisenti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/06 09:13:50 by tvisenti          #+#    #+#             */
-/*   Updated: 2017/04/06 17:49:38 by tvisenti         ###   ########.fr       */
+/*   Updated: 2017/04/06 20:19:12 by tvisenti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,11 @@ FragTrap::~FragTrap(void) {
 	return;
 }
 
+FragTrap::FragTrap(FragTrap const & src) {
+	*this = src;
+	return;
+}
+
 FragTrap&	FragTrap::operator=(FragTrap const & rhs) {
 	if (this != &rhs) {
 		this->log();
@@ -38,6 +43,11 @@ FragTrap&	FragTrap::operator=(FragTrap const & rhs) {
         this->_meleeAttackDamage = rhs._meleeAttackDamage;
         this->_rangedAttackDamage = rhs._rangedAttackDamage;
         this->_armorDamageReduction = rhs._armorDamageReduction;
+		this->_stoneAttackDamage = rhs._stoneAttackDamage;
+		this->_spoonAttackDamage = rhs._spoonAttackDamage;
+		this->_chainsawPlasmaDeathMortalAttackDamage = rhs._chainsawPlasmaDeathMortalAttackDamage;
+		this->_stabInTheBackAttackDamage = rhs._stabInTheBackAttackDamage;
+		this->_kamehamehaAttackDamage = rhs._kamehamehaAttackDamage;
 	}
 	return *this;
 }

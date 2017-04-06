@@ -6,7 +6,7 @@
 /*   By: tvisenti <tvisenti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/06 09:13:48 by tvisenti          #+#    #+#             */
-/*   Updated: 2017/04/06 18:11:36 by tvisenti         ###   ########.fr       */
+/*   Updated: 2017/04/06 20:15:59 by tvisenti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@ class FragTrap {
 	public:
 		FragTrap(std::string name);
 		~FragTrap(void);
+		FragTrap(FragTrap const & src);
 
 		FragTrap&	operator=(FragTrap const & rhs);
 

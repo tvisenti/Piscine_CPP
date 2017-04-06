@@ -6,7 +6,7 @@
 #    By: tvisenti <tvisenti@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/03/29 14:21:49 by tvisenti          #+#    #+#              #
-#    Updated: 2017/04/06 16:48:00 by tvisenti         ###   ########.fr        #
+#    Updated: 2017/04/06 19:50:08 by tvisenti         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,11 +16,11 @@ CC = clang++
 
 FLAGS = -Wall -Wextra -Werror
 
-NAME = fragTrap
+NAME = scavTrap
 
 all: $(NAME)
 
-fragTrap:
+scavTrap:
 	@$(CC) $(FLAGS) main.cpp FragTrap.cpp ScavTrap.cpp -o $(NAME)
 	@echo "\033[1;34mD03\t\033[1;33mCompilation\t\033[0;32m[OK]\033[0m"
 
