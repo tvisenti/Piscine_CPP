@@ -6,7 +6,7 @@
 /*   By: tvisenti <tvisenti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/05 14:25:59 by tvisenti          #+#    #+#             */
-/*   Updated: 2017/04/05 23:20:09 by Transmetropolitan###   ########.fr       */
+/*   Updated: 2017/04/06 21:34:07 by tvisenti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,17 +31,17 @@ class Fixed {
 		float	toFloat(void) const;
 		int		toInt(void) const;
 
-		bool	operator>(Fixed const& rhs);
-		bool	operator<(Fixed const& rhs);
-		bool	operator>=(Fixed const& rhs);
-		bool	operator<=(Fixed const& rhs);
-		bool	operator==(Fixed const& rhs);
-		bool	operator!=(Fixed const& rhs);
+		bool	operator>(Fixed const& rhs) const;
+		bool	operator<(Fixed const& rhs) const;
+		bool	operator>=(Fixed const& rhs) const;
+		bool	operator<=(Fixed const& rhs) const;
+		bool	operator==(Fixed const& rhs) const;
+		bool	operator!=(Fixed const& rhs) const;
 
-		Fixed	operator+(Fixed const& rhs);
-		Fixed	operator-(Fixed const& rhs);
-		Fixed	operator*(Fixed const& rhs);
-		Fixed	operator/(Fixed const& rhs);
+		Fixed	operator+(Fixed const& rhs) const;
+		Fixed	operator-(Fixed const& rhs) const;
+		Fixed	operator*(Fixed const& rhs) const;
+		Fixed	operator/(Fixed const& rhs) const;
 
 		Fixed&	operator++();
 		Fixed&	operator--();

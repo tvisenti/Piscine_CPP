@@ -6,7 +6,7 @@
 /*   By: tvisenti <tvisenti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/05 14:25:56 by tvisenti          #+#    #+#             */
-/*   Updated: 2017/04/05 23:16:39 by Transmetropolitan###   ########.fr       */
+/*   Updated: 2017/04/06 21:38:36 by tvisenti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,43 +72,47 @@ int		Fixed::_myPow(const int n) const {
 	return ret;
 }
 
-bool	Fixed::operator>(Fixed const& rhs) {
+bool	Fixed::operator>(Fixed const& rhs) const {
 	return (this->toFloat() > rhs.toFloat());
 }
 
-bool	Fixed::operator<(Fixed const& rhs) {
+bool	Fixed::operator<(Fixed const& rhs) const {
 	return (this->toFloat() < rhs.toFloat());
 }
 
-bool	Fixed::operator>=(Fixed const& rhs) {
+bool	Fixed::operator>=(Fixed const& rhs) const {
 	return (this->toFloat() >= rhs.toFloat());
 }
 
-bool	Fixed::operator<=(Fixed const& rhs) {
+bool	Fixed::operator<=(Fixed const& rhs) const {
 	return (this->toFloat() <= rhs.toFloat());
 }
 
-bool	Fixed::operator==(Fixed const& rhs) {
+bool	Fixed::operator==(Fixed const& rhs) const {
 	return (this->toFloat() == rhs.toFloat());
 }
 
-bool	Fixed::operator!=(Fixed const& rhs) {
+bool	Fixed::operator!=(Fixed const& rhs) const {
 	return (this->toFloat() != rhs.toFloat());
 }
 
-Fixed	Fixed::Fixed::operator+(Fixed const& rhs) {
+Fixed	Fixed::Fixed::operator+(Fixed const& rhs) const {
 	return (Fixed(this->toFloat() + rhs.toFloat()));
 }
 
-Fixed	Fixed::Fixed::operator-(Fixed const& rhs) {
+Fixed	Fixed::Fixed::operator-(Fixed const& rhs) const {
 	return (Fixed(this->toFloat() - rhs.toFloat()));
 }
 
-Fixed	Fixed::Fixed::operator*(Fixed const& rhs) {
+Fixed	Fixed::Fixed::operator*(Fixed const& rhs) const {
 	return (Fixed(this->toFloat() * rhs.toFloat()));
 }
 
-Fixed	Fixed::Fixed::operator/(Fixed const& rhs) {
+Fixed	Fixed::Fixed::operator/(Fixed const& rhs) const {
+	if (rhs.toFloat() == 0) {
+		std::cout << "Divide with zero is not allowed";
+		return (Fixed(0));
+	}
 	return (Fixed(this->toFloat() / rhs.toFloat()));
 }
 
