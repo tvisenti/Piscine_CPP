@@ -6,7 +6,7 @@
 /*   By: tvisenti <tvisenti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/06 21:51:33 by tvisenti          #+#    #+#             */
-/*   Updated: 2017/04/06 21:52:55 by tvisenti         ###   ########.fr       */
+/*   Updated: 2017/04/06 22:46:38 by tvisenti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 # define NINJATRAP_HPP
 # include <iostream>
 # include "ClapTrap.hpp"
+# include "FragTrap.hpp"
+# include "ScavTrap.hpp"
 
 class NinjaTrap : public ClapTrap {
 	public:
@@ -23,7 +25,10 @@ class NinjaTrap : public ClapTrap {
 
 		NinjaTrap&	operator=(NinjaTrap const & rhs);
 
-		void	challengeNewcomer(std::string const & target);
+		void	ninjaShoebox(ClapTrap const & action) const;
+		void	ninjaShoebox(FragTrap const & action) const;
+		void	ninjaShoebox(ScavTrap const & action) const;
+		void	ninjaShoebox(NinjaTrap const & action) const;
 
 	private:
 		NinjaTrap(void);

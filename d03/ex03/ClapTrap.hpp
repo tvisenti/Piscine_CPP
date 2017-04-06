@@ -6,7 +6,7 @@
 /*   By: tvisenti <tvisenti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/06 19:15:26 by tvisenti          #+#    #+#             */
-/*   Updated: 2017/04/06 21:29:12 by tvisenti         ###   ########.fr       */
+/*   Updated: 2017/04/06 22:45:02 by tvisenti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ class ClapTrap {
 		ClapTrap(ClapTrap const & src);
 
 		ClapTrap&	operator=(ClapTrap const & rhs);
+
+		std::string	getClapName(void) const;
 
 		void	initTrap(void);
 		void	log(void) const;

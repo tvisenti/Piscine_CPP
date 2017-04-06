@@ -6,7 +6,7 @@
 /*   By: tvisenti <tvisenti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/06 19:15:17 by tvisenti          #+#    #+#             */
-/*   Updated: 2017/04/06 22:20:33 by tvisenti         ###   ########.fr       */
+/*   Updated: 2017/04/06 22:44:55 by tvisenti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,6 +66,10 @@ void	ClapTrap::initTrap(void) {
 
 void	ClapTrap::log(void) const {
 	std::cout << this->_log << " ";
+}
+
+std::string	ClapTrap::getClapName(void) const {
+	return (this->_name);
 }
 
 void	ClapTrap::rangedAttack(std::string const & target) const {

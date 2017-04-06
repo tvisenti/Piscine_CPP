@@ -6,7 +6,7 @@
 /*   By: tvisenti <tvisenti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/06 21:51:21 by tvisenti          #+#    #+#             */
-/*   Updated: 2017/04/06 22:20:42 by tvisenti         ###   ########.fr       */
+/*   Updated: 2017/04/06 23:09:55 by tvisenti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,13 @@
 NinjaTrap::NinjaTrap(std::string name) : ClapTrap(name, "NI4J-TP"), _name(name) {
 	this->initTrap();
 	this->log();
-	std::cout << name <<  " :'This time it'll be awesome, I promise!'" << std::endl;
+	std::cout << name <<  " :'Hi guys, it's me Mar... nooooo I'm a ninja yo.'" << std::endl;
 	return;
 }
 
 NinjaTrap::~NinjaTrap(void) {
 	this->log();
-	std::cout << this->_name << " :'I'll stop talking when I'm dead! Oops I'm dead!'" << std::endl;
+	std::cout << this->_name << " :'Rěnzhě shì sǐ / Ninja is dead.'" << std::endl;
 	return;
 }
 
@@ -68,15 +68,27 @@ void	NinjaTrap::initTrap(void) {
 	this->_kamehamehaAttackDamage = 9;
 }
 
-void	NinjaTrap::ninjaShoebox(std::string const & target) {
+void	NinjaTrap::ninjaShoebox(ClapTrap const & action) const {
 	this->log();
-	std::string array[5] = {"Look at me! I'm dancing! I'm dancing! Can you do that?", "Can't you wait 2 seconds?", "Let's do a Rock - Paper - Scissors", "Spell my name backwards", "Kiss my wheel"};
-	if (this->_hitPoints == 0) {
-		std::cout << this->_name << " :'I can't challenge if I'm dead... PLEASE FIX ME'" << std::endl;
-	} else {
-		std::string	toPrint = array[rand() % 5];
-		std::cout << this->_name << " challenges the famous " << target << " to do : '" << toPrint << "'!" << std::endl;
-	}
+	std::cout << this->_name << " :'Nobody hurts my friends, " << action.getClapName() << "'!" << std::endl;
+	return;
+}
+
+void	NinjaTrap::ninjaShoebox(FragTrap const & action) const {
+	this->log();
+	std::cout << this->_name << " :'Here I come to save the day with you, " << action.getClapName() << "'!" << std::endl;
+	return;
+}
+
+void	NinjaTrap::ninjaShoebox(ScavTrap const & action) const {
+	this->log();
+	std::cout << this->_name << " :'Just point me in the right direction, " << action.getClapName() << "'!" << std::endl;
+	return;
+}
+
+void	NinjaTrap::ninjaShoebox(NinjaTrap const & action) const {
+	this->log();
+	std::cout << this->_name << " :'Have no fear, mini-trap is here look, " << action.getClapName() << "'!" << std::endl;
 	return;
 }
 
