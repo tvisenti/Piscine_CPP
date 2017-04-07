@@ -6,7 +6,7 @@
 /*   By: tvisenti <tvisenti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/06 23:14:43 by tvisenti          #+#    #+#             */
-/*   Updated: 2017/04/07 12:32:59 by tvisenti         ###   ########.fr       */
+/*   Updated: 2017/04/07 21:31:11 by tvisenti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,28 +53,14 @@ SuperTrap&	SuperTrap::operator=(SuperTrap const & rhs) {
 }
 
 void	SuperTrap::initTrap(void) {
-	// this->_hitPoints = this->FragTrap::_hitPoints;
-	// this->_maxHitPoints = this->FragTrap::_maxHitPoints;
-	// this->_energyPoints = this->NinjaTrap::_energyPoints;
-	// this->_maxEnergyPoints = this->NinjaTrap::_maxEnergyPoints;
-	// this->_level = 1;
-	// this->_meleeAttackDamage = this->NinjaTrap::_meleeAttackDamage;
-	// this->_rangedAttackDamage = this->FragTrap::_rangedAttackDamage;
-	// this->_armorDamageReduction = this->FragTrap::_armorDamageReduction;
-	// this->_stoneAttackDamage = 7;
-	// this->_spoonAttackDamage = 12;
-	// this->_chainsawPlasmaDeathMortalAttackDamage = 4;
-	// this->_stabInTheBackAttackDamage = 99;
-	// this->_kamehamehaAttackDamage = 50;
-
-	this->_hitPoints = 100;
-	this->_maxHitPoints = 100;
-	this->_energyPoints = 120;
-	this->_maxEnergyPoints = 120;
+	this->_hitPoints = this->FragTrap::s_hitPoints;
+	this->_maxHitPoints = this->FragTrap::s_maxHitPoints;
+	this->_energyPoints = this->NinjaTrap::s_energyPoints;
+	this->_maxEnergyPoints = this->NinjaTrap::s_maxEnergyPoints;
 	this->_level = 1;
-	this->_meleeAttackDamage = 60;
-	this->_rangedAttackDamage = 20;
-	this->_armorDamageReduction = 5;
+	this->_meleeAttackDamage = this->NinjaTrap::s_meleeAttackDamage;
+	this->_rangedAttackDamage = this->FragTrap::s_rangedAttackDamage;
+	this->_armorDamageReduction = this->FragTrap::s_armorDamageReduction;
 	this->_stoneAttackDamage = 7;
 	this->_spoonAttackDamage = 12;
 	this->_chainsawPlasmaDeathMortalAttackDamage = 4;

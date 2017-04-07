@@ -6,7 +6,7 @@
 /*   By: tvisenti <tvisenti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/06 09:13:50 by tvisenti          #+#    #+#             */
-/*   Updated: 2017/04/07 11:37:14 by tvisenti         ###   ########.fr       */
+/*   Updated: 2017/04/07 21:21:33 by tvisenti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,19 +53,19 @@ FragTrap&	FragTrap::operator=(FragTrap const & rhs) {
 }
 
 void	FragTrap::initTrap(void) {
-	this->_hitPoints = 100;
-	this->_maxHitPoints = 100;
-	this->_energyPoints = 100;
-	this->_maxEnergyPoints = 100;
-	this->_level = 1;
-	this->_meleeAttackDamage = 30;
-	this->_rangedAttackDamage = 20;
-	this->_armorDamageReduction = 5;
-	this->_stoneAttackDamage = 1;
-	this->_spoonAttackDamage = 99;
-	this->_chainsawPlasmaDeathMortalAttackDamage = 6;
-	this->_stabInTheBackAttackDamage = 21;
-	this->_kamehamehaAttackDamage = 42;
+	this->_hitPoints = this->s_hitPoints;
+	this->_maxHitPoints = this->s_maxHitPoints;
+	this->_energyPoints = this->s_energyPoints;
+	this->_maxEnergyPoints = this->s_maxEnergyPoints;
+	this->_level = this->s_level;
+	this->_meleeAttackDamage = this->s_meleeAttackDamage;
+	this->_rangedAttackDamage = this->s_rangedAttackDamage;
+	this->_armorDamageReduction = this->s_armorDamageReduction;
+	this->_stoneAttackDamage = this->s_stoneAttackDamage;
+	this->_spoonAttackDamage = this->s_spoonAttackDamage;
+	this->_chainsawPlasmaDeathMortalAttackDamage = this->s_chainsawPlasmaDeathMortalAttackDamage;
+	this->_stabInTheBackAttackDamage = this->s_stabInTheBackAttackDamage;
+	this->_kamehamehaAttackDamage = this->s_kamehamehaAttackDamage;
 }
 
 void	FragTrap::vaulthunter_dot_exe(std::string const & target) {

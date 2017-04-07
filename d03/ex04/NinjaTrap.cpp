@@ -6,7 +6,7 @@
 /*   By: tvisenti <tvisenti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/06 21:51:21 by tvisenti          #+#    #+#             */
-/*   Updated: 2017/04/07 12:19:58 by tvisenti         ###   ########.fr       */
+/*   Updated: 2017/04/07 21:20:45 by tvisenti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,19 +53,19 @@ NinjaTrap&	NinjaTrap::operator=(NinjaTrap const & rhs) {
 }
 
 void	NinjaTrap::initTrap(void) {
-	this->_hitPoints = 60;
-	this->_maxHitPoints = 60;
-	this->_energyPoints = 120;
-	this->_maxEnergyPoints = 120;
-	this->_level = 1;
-	this->_meleeAttackDamage = 60;
-	this->_rangedAttackDamage = 5;
-	this->_armorDamageReduction = 0;
-	this->_stoneAttackDamage = 88;
-	this->_spoonAttackDamage = 12;
-	this->_chainsawPlasmaDeathMortalAttackDamage = 1;
-	this->_stabInTheBackAttackDamage = 99;
-	this->_kamehamehaAttackDamage = 9;
+	this->_hitPoints = this->s_hitPoints;
+	this->_maxHitPoints = this->s_maxHitPoints;
+	this->_energyPoints = this->s_energyPoints;
+	this->_maxEnergyPoints = this->s_maxEnergyPoints;
+	this->_level = this->s_level;
+	this->_meleeAttackDamage = this->s_meleeAttackDamage;
+	this->_rangedAttackDamage = this->s_rangedAttackDamage;
+	this->_armorDamageReduction = this->s_armorDamageReduction;
+	this->_stoneAttackDamage = this->s_stoneAttackDamage;
+	this->_spoonAttackDamage = this->s_spoonAttackDamage;
+	this->_chainsawPlasmaDeathMortalAttackDamage = this->s_chainsawPlasmaDeathMortalAttackDamage;
+	this->_stabInTheBackAttackDamage = this->s_stabInTheBackAttackDamage;
+	this->_kamehamehaAttackDamage = this->s_kamehamehaAttackDamage;
 }
 
 void	NinjaTrap::ninjaShoebox(ClapTrap const & action) const {
