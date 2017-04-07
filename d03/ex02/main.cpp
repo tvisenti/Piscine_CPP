@@ -6,7 +6,7 @@
 /*   By: tvisenti <tvisenti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/06 09:13:44 by tvisenti          #+#    #+#             */
-/*   Updated: 2017/04/06 20:33:59 by tvisenti         ###   ########.fr       */
+/*   Updated: 2017/04/07 20:59:08 by tvisenti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,38 +17,42 @@
 int		main() {
 	srand(time(NULL));
 
-	FragTrap *ftrap = new FragTrap("__Frag__");
-    ftrap->meleeAttack("Jack");
-    ftrap->rangedAttack("Joe");
-    ftrap->takeDamage(30);
-    ftrap->takeDamage(900);
-	ftrap->takeDamage(1);
-	ftrap->vaulthunter_dot_exe("Job");
-	ftrap->beRepaired(20);
-    ftrap->beRepaired(110);
-    ftrap->vaulthunter_dot_exe("Jonas");
-    ftrap->vaulthunter_dot_exe("Jacob");
-	ftrap->vaulthunter_dot_exe("John");
-	ftrap->vaulthunter_dot_exe("Joshua");
-    ftrap->rangedAttack("Beauregard");
+	FragTrap	frag("Jack");
+	ScavTrap	scav("Beauregard");
+	ClapTrap	clap("Trap");
 
-	ScavTrap *strap = new ScavTrap("__Scav__");
-	strap->meleeAttack("Jack");
-	strap->rangedAttack("Joe");
-	strap->takeDamage(30);
-	strap->takeDamage(900);
-	strap->takeDamage(1);
-	strap->challengeNewcomer("Job");
-	strap->beRepaired(20);
-	strap->beRepaired(110);
-	strap->challengeNewcomer("Jonas");
-	strap->challengeNewcomer("Jacob");
-	strap->challengeNewcomer("John");
-	strap->challengeNewcomer("Joshua");
-	strap->rangedAttack("Beauregard");
+	std::cout << std::endl << "-- Tests for FragTrap" << std::endl;
+	frag.meleeAttack("enemy");
+	frag.rangedAttack("enemy");
+	frag.takeDamage(30);
+	frag.takeDamage(30);
+	frag.takeDamage(30);
+	frag.takeDamage(30);
+	frag.takeDamage(30);
+	frag.beRepaired(40);
+	frag.beRepaired(100);
+	frag.vaulthunter_dot_exe("enemy");
+	frag.vaulthunter_dot_exe("enemy");
+	frag.vaulthunter_dot_exe("enemy");
+	frag.vaulthunter_dot_exe("enemy");
+	frag.vaulthunter_dot_exe("enemy");
+	frag.meleeAttack("enemy");
 
-
-    delete ftrap;
-	delete strap;
-	return(0);
+	std::cout << std::endl << "-- Tests for ScavTrap" << std::endl;
+	scav.meleeAttack("enemy");
+	scav.rangedAttack("enemy");
+	scav.takeDamage(30);
+	scav.takeDamage(30);
+	scav.takeDamage(30);
+	scav.takeDamage(30);
+	scav.takeDamage(30);
+	scav.beRepaired(40);
+	scav.beRepaired(100);
+	scav.challengeNewcomer();
+	scav.challengeNewcomer();
+	scav.challengeNewcomer();
+	scav.challengeNewcomer();
+	scav.challengeNewcomer();
+	scav.meleeAttack("enemy");
+	return 0;
 }

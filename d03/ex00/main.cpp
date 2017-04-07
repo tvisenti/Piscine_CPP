@@ -6,7 +6,7 @@
 /*   By: tvisenti <tvisenti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/06 09:13:44 by tvisenti          #+#    #+#             */
-/*   Updated: 2017/04/06 15:48:39 by tvisenti         ###   ########.fr       */
+/*   Updated: 2017/04/07 20:57:19 by tvisenti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,24 +15,22 @@
 int		main() {
 	srand(time(NULL));
 
-	FragTrap *ftrap = new FragTrap("Clap Clap");
+	FragTrap	robot("Jack");
 
-    ftrap->meleeAttack("Jack");
-    ftrap->rangedAttack("Joe");
-
-    ftrap->takeDamage(30);
-    ftrap->takeDamage(900);
-	ftrap->takeDamage(1);
-	ftrap->vaulthunter_dot_exe("Job");
-	ftrap->beRepaired(20);
-    ftrap->beRepaired(110);
-
-    ftrap->vaulthunter_dot_exe("Jonas");
-    ftrap->vaulthunter_dot_exe("Jacob");
-	ftrap->vaulthunter_dot_exe("John");
-	ftrap->vaulthunter_dot_exe("Joshua");
-    ftrap->rangedAttack("Beauregard");
-
-    delete ftrap;
-	return(0);
+	robot.meleeAttack("enemy");
+	robot.rangedAttack("enemy");
+	robot.takeDamage(30);
+	robot.takeDamage(30);
+	robot.takeDamage(30);
+	robot.takeDamage(30);
+	robot.takeDamage(30);
+	robot.beRepaired(40);
+	robot.beRepaired(100);
+	robot.vaulthunter_dot_exe("enemy");
+	robot.vaulthunter_dot_exe("enemy");
+	robot.vaulthunter_dot_exe("enemy");
+	robot.vaulthunter_dot_exe("enemy");
+	robot.vaulthunter_dot_exe("enemy");
+	robot.meleeAttack("enemy");
+	return (0);
 }
