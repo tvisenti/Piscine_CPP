@@ -6,13 +6,13 @@
 /*   By: tvisenti <tvisenti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/07 16:34:39 by tvisenti          #+#    #+#             */
-/*   Updated: 2017/04/07 17:38:03 by tvisenti         ###   ########.fr       */
+/*   Updated: 2017/04/07 18:20:26 by tvisenti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PowerFist.hpp"
 
-PowerFist::PowerFist(void) : AWeapon("Power Fist", 50, 8), _name("Power Fist"), _apcost(50), _damage(8) {
+PowerFist::PowerFist(void) : AWeapon("Power Fist", 50, 8) {
     return;
 }
 
@@ -27,9 +27,7 @@ PowerFist::~PowerFist(void) {
 
 PowerFist &PowerFist::operator=(PowerFist const &rhs) {
     if (this != &rhs) {
-		this->_name = rhs._name;
-		this->_apcost = rhs._apcost;
-		this->_damage = rhs._damage;
+
     }
     return *this;
 }

@@ -6,14 +6,15 @@
 /*   By: tvisenti <tvisenti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/07 16:31:57 by tvisenti          #+#    #+#             */
-/*   Updated: 2017/04/07 17:26:29 by tvisenti         ###   ########.fr       */
+/*   Updated: 2017/04/07 20:26:19 by tvisenti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "AWeapon.hpp"
 
-AWeapon::AWeapon(std::string const & name, int apcost, int damage) : _name(name), _apcost(apcost), _damage(damage) {
-    return;
+AWeapon::AWeapon(std::string const & name, int damage, int apcost) : _name(name), _apcost(apcost), _damage(damage) {
+	// std::cout << "Name: " << name << ", apcost: " << apcost << ", damage: " << damage << std::endl;
+	return;
 }
 
 AWeapon::AWeapon(AWeapon const &src) {
@@ -28,8 +29,8 @@ AWeapon::~AWeapon(void) {
 AWeapon &AWeapon::operator=(AWeapon const &rhs) {
 	if (this != &rhs) {
 		this->_name = rhs._name;
-		this->_damage = rhs._damage;
 		this->_apcost = rhs._apcost;
+		this->_damage = rhs._damage;
 	}
     return *this;
 }

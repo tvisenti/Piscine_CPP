@@ -6,7 +6,7 @@
 /*   By: tvisenti <tvisenti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/07 16:34:04 by tvisenti          #+#    #+#             */
-/*   Updated: 2017/04/07 17:32:28 by tvisenti         ###   ########.fr       */
+/*   Updated: 2017/04/07 18:20:12 by tvisenti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,7 @@ class PlasmaRifle : public virtual AWeapon {
 		void	attack(void) const;
 
 	private:
-		std::string		_name;
-		int				_apcost;
-		int				_damage;
+
 };
 
 #endif
