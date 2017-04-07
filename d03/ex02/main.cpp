@@ -6,7 +6,7 @@
 /*   By: tvisenti <tvisenti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/06 09:13:44 by tvisenti          #+#    #+#             */
-/*   Updated: 2017/04/07 20:59:08 by tvisenti         ###   ########.fr       */
+/*   Updated: 2017/04/07 21:08:39 by tvisenti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int		main() {
 
 	FragTrap	frag("Jack");
 	ScavTrap	scav("Beauregard");
-	ClapTrap	clap("Trap");
+	ClapTrap	clap("Clap", "Trap");
 
 	std::cout << std::endl << "-- Tests for FragTrap" << std::endl;
 	frag.meleeAttack("enemy");
@@ -48,11 +48,11 @@ int		main() {
 	scav.takeDamage(30);
 	scav.beRepaired(40);
 	scav.beRepaired(100);
-	scav.challengeNewcomer();
-	scav.challengeNewcomer();
-	scav.challengeNewcomer();
-	scav.challengeNewcomer();
-	scav.challengeNewcomer();
+	scav.challengeNewcomer("Jean");
+	scav.challengeNewcomer("Job");
+	scav.challengeNewcomer("Joshua");
+	scav.challengeNewcomer("John");
+	scav.challengeNewcomer("Jeff");
 	scav.meleeAttack("enemy");
 	return 0;
 }

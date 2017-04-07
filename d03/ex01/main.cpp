@@ -6,7 +6,7 @@
 /*   By: tvisenti <tvisenti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/06 09:13:44 by tvisenti          #+#    #+#             */
-/*   Updated: 2017/04/07 20:59:46 by tvisenti         ###   ########.fr       */
+/*   Updated: 2017/04/07 21:07:07 by tvisenti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,11 +46,11 @@ int		main() {
 	scav.takeDamage(30);
 	scav.beRepaired(40);
 	scav.beRepaired(100);
-	scav.challengeNewcomer();
-	scav.challengeNewcomer();
-	scav.challengeNewcomer();
-	scav.challengeNewcomer();
-	scav.challengeNewcomer();
+	scav.challengeNewcomer("Jean");
+	scav.challengeNewcomer("Job");
+	scav.challengeNewcomer("Joshua");
+	scav.challengeNewcomer("John");
+	scav.challengeNewcomer("Jeff");
 	scav.meleeAttack("enemy");
 	return (0);
 }
