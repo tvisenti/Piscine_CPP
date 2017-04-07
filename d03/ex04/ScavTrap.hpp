@@ -6,7 +6,7 @@
 /*   By: tvisenti <tvisenti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/06 16:47:34 by tvisenti          #+#    #+#             */
-/*   Updated: 2017/04/06 23:16:54 by tvisenti         ###   ########.fr       */
+/*   Updated: 2017/04/07 11:38:48 by tvisenti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 # include <iostream>
 # include "ClapTrap.hpp"
 
-class ScavTrap : public ClapTrap {
+class ScavTrap : public virtual ClapTrap {
 	public:
 		ScavTrap(std::string name);
 		~ScavTrap(void);

@@ -6,7 +6,7 @@
 /*   By: tvisenti <tvisenti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/06 21:51:33 by tvisenti          #+#    #+#             */
-/*   Updated: 2017/04/06 23:17:01 by tvisenti         ###   ########.fr       */
+/*   Updated: 2017/04/07 11:37:24 by tvisenti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,10 @@
 # include "FragTrap.hpp"
 # include "ScavTrap.hpp"
 
-class NinjaTrap : public ClapTrap {
+class NinjaTrap : public virtual ClapTrap {
 	public:
 		NinjaTrap(std::string name);
-		~NinjaTrap(void);
+		virtual ~NinjaTrap(void);
 		NinjaTrap(NinjaTrap const & src);
 
 		NinjaTrap&	operator=(NinjaTrap const & rhs);

@@ -6,13 +6,13 @@
 /*   By: tvisenti <tvisenti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/06 23:14:43 by tvisenti          #+#    #+#             */
-/*   Updated: 2017/04/06 23:49:36 by tvisenti         ###   ########.fr       */
+/*   Updated: 2017/04/07 12:32:59 by tvisenti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "SuperTrap.hpp"
 
-SuperTrap::SuperTrap(std::string name) : FragTrap(name), NinjaTrap(name) {
+SuperTrap::SuperTrap(std::string name) : ClapTrap(name, "SP3R-TP"), NinjaTrap(name), FragTrap(name) {
 	this->initTrap();
 	this->log();
 	std::cout << name <<  " :'SP3R-TP is here.'" << std::endl;
@@ -25,7 +25,7 @@ SuperTrap::~SuperTrap(void) {
 	return;
 }
 
-SuperTrap::SuperTrap(SuperTrap const & src) : FragTrap(src), NinjaTrap(src) {
+SuperTrap::SuperTrap(SuperTrap const & src) : ClapTrap(src), NinjaTrap(src), FragTrap(src) {
 	*this = src;
 	return;
 }
@@ -53,19 +53,43 @@ SuperTrap&	SuperTrap::operator=(SuperTrap const & rhs) {
 }
 
 void	SuperTrap::initTrap(void) {
+	// this->_hitPoints = this->FragTrap::_hitPoints;
+	// this->_maxHitPoints = this->FragTrap::_maxHitPoints;
+	// this->_energyPoints = this->NinjaTrap::_energyPoints;
+	// this->_maxEnergyPoints = this->NinjaTrap::_maxEnergyPoints;
+	// this->_level = 1;
+	// this->_meleeAttackDamage = this->NinjaTrap::_meleeAttackDamage;
+	// this->_rangedAttackDamage = this->FragTrap::_rangedAttackDamage;
+	// this->_armorDamageReduction = this->FragTrap::_armorDamageReduction;
+	// this->_stoneAttackDamage = 7;
+	// this->_spoonAttackDamage = 12;
+	// this->_chainsawPlasmaDeathMortalAttackDamage = 4;
+	// this->_stabInTheBackAttackDamage = 99;
+	// this->_kamehamehaAttackDamage = 50;
+
 	this->_hitPoints = 100;
 	this->_maxHitPoints = 100;
-	this->_energyPoints = 50;
-	this->_maxEnergyPoints = 50;
+	this->_energyPoints = 120;
+	this->_maxEnergyPoints = 120;
 	this->_level = 1;
-	this->_meleeAttackDamage = 20;
-	this->_rangedAttackDamage = 15;
-	this->_armorDamageReduction = 3;
-	this->_stoneAttackDamage = 11;
-	this->_spoonAttackDamage = 98;
-	this->_chainsawPlasmaDeathMortalAttackDamage = 77;
-	this->_stabInTheBackAttackDamage = 42;
-	this->_kamehamehaAttackDamage = 21;
+	this->_meleeAttackDamage = 60;
+	this->_rangedAttackDamage = 20;
+	this->_armorDamageReduction = 5;
+	this->_stoneAttackDamage = 7;
+	this->_spoonAttackDamage = 12;
+	this->_chainsawPlasmaDeathMortalAttackDamage = 4;
+	this->_stabInTheBackAttackDamage = 99;
+	this->_kamehamehaAttackDamage = 50;
+
+	std::cout << "_hitPoints, should be (100): " << this->_hitPoints << std::endl;
+	std::cout << "_maxHitPoi, should be (100): " << this->_maxHitPoints << std::endl;
+	std::cout << "_energyPoi, should be (120): " << this->_energyPoints << std::endl;
+	std::cout << "_maxEnergy, should be (120): " << this->_maxEnergyPoints << std::endl;
+	std::cout << "_level    , should be (  1): " << this->_level << std::endl;
+	std::cout << "_meleeAtta, should be ( 60): " << this->_meleeAttackDamage << std::endl;
+	std::cout << "_rangedAtt, should be ( 20): " << this->_rangedAttackDamage << std::endl;
+	std::cout << "_armorDama, should be (  5): " << this->_armorDamageReduction << std::endl;
+	std::cout << "_stoneAtta, should be (  7): " << this->_stoneAttackDamage << std::endl;
 }
 
 void	SuperTrap::log(void) const {

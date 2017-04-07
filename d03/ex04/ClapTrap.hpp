@@ -6,7 +6,7 @@
 /*   By: tvisenti <tvisenti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/06 19:15:26 by tvisenti          #+#    #+#             */
-/*   Updated: 2017/04/06 23:17:09 by tvisenti         ###   ########.fr       */
+/*   Updated: 2017/04/07 11:51:37 by tvisenti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 class ClapTrap {
 	public:
 		ClapTrap(std::string name, std::string log);
-		~ClapTrap(void);
+		virtual ~ClapTrap(void);
 		ClapTrap(ClapTrap const & src);
 
 		ClapTrap&	operator=(ClapTrap const & rhs);
@@ -40,9 +40,10 @@ class ClapTrap {
 		void	beRepaired(unsigned int amount);
 
 	private:
-		ClapTrap(void);
 
 	protected:
+		ClapTrap(void);
+
 		unsigned int	_hitPoints;
 		unsigned int	_maxHitPoints;
 		unsigned int	_energyPoints;

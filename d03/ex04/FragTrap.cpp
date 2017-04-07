@@ -6,7 +6,7 @@
 /*   By: tvisenti <tvisenti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/06 09:13:50 by tvisenti          #+#    #+#             */
-/*   Updated: 2017/04/06 23:19:34 by tvisenti         ###   ########.fr       */
+/*   Updated: 2017/04/07 11:37:14 by tvisenti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ FragTrap::~FragTrap(void) {
 	return;
 }
 
-FragTrap::FragTrap(FragTrap const & src) : ClapTrap(src) {
+FragTrap::FragTrap(FragTrap const & src) :  ClapTrap(src) {
 	*this = src;
 	return;
 }
@@ -77,8 +77,8 @@ void	FragTrap::vaulthunter_dot_exe(std::string const & target) {
 		std::cout << this->_name << " :'NO POWER STUPID'" << std::endl;
 	} else {
 		if (this->_energyPoints > 25) {
-			void	(FragTrap::*array[5])(std::string const & target) const = {&FragTrap::stoneAttack, &FragTrap::spoonAttack,
-				&FragTrap::chainsawPlasmaDeathMortalAttack, &FragTrap::stabInTheBackAttack, &FragTrap::kamehamehaAttack};
+			void	(ClapTrap::*array[5])(std::string const & target) const = {&ClapTrap::stoneAttack, &ClapTrap::spoonAttack,
+			&ClapTrap::chainsawPlasmaDeathMortalAttack, &ClapTrap::stabInTheBackAttack, &ClapTrap::kamehamehaAttack};
 			this->_energyPoints -= 25;
 			(this->*array[rand() % 5])(target);
 		} else {

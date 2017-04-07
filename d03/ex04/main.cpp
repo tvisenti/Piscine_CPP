@@ -6,7 +6,7 @@
 /*   By: tvisenti <tvisenti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/06 09:13:44 by tvisenti          #+#    #+#             */
-/*   Updated: 2017/04/06 23:06:52 by tvisenti         ###   ########.fr       */
+/*   Updated: 2017/04/07 12:08:23 by tvisenti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 #include "ScavTrap.hpp"
 #include "ClapTrap.hpp"
 #include "NinjaTrap.hpp"
+#include "SuperTrap.hpp"
 
 int		main() {
 	srand(time(NULL));
@@ -61,6 +62,23 @@ int		main() {
 	ntrap.beRepaired(110);
 	ntrap.ninjaShoebox(ftrap);
 	ntrap.rangedAttack("Beauregard");
+
+	SuperTrap *ptrap = new SuperTrap("__Supr__");
+	ptrap->meleeAttack("Jack");
+	ptrap->rangedAttack("Joe");
+	ptrap->takeDamage(30);
+	ptrap->takeDamage(900);
+	ptrap->takeDamage(1);
+	ptrap->beRepaired(20);
+	ptrap->beRepaired(110);
+	ptrap->vaulthunter_dot_exe("Jonas");
+    ptrap->vaulthunter_dot_exe("Jacob");
+	ptrap->vaulthunter_dot_exe("John");
+	ptrap->vaulthunter_dot_exe("Joshua");
+	ptrap->vaulthunter_dot_exe("Joshua");
+	ptrap->ninjaShoebox(ftrap);
+	ptrap->ninjaShoebox(clapT);
+	ptrap->rangedAttack("Beauregard");
 
 	delete strap;
 	return(0);

@@ -6,7 +6,7 @@
 #    By: tvisenti <tvisenti@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/03/29 14:21:49 by tvisenti          #+#    #+#              #
-#    Updated: 2017/04/06 21:50:39 by tvisenti         ###   ########.fr        #
+#    Updated: 2017/04/07 11:50:51 by tvisenti         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,7 @@ NAME = ninjaTrap
 all: $(NAME)
 
 ninjaTrap:
-	@$(CC) $(FLAGS) main.cpp FragTrap.cpp ScavTrap.cpp ClapTrap.cpp NinjaTrap.cpp -o $(NAME)
+	@$(CC) $(FLAGS) main.cpp FragTrap.cpp ScavTrap.cpp ClapTrap.cpp NinjaTrap.cpp SuperTrap.cpp -o $(NAME)
 	@echo "\033[1;34mD03\t\033[1;33mCompilation\t\033[0;32m[OK]\033[0m"
 
 clean:

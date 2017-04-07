@@ -6,7 +6,7 @@
 /*   By: tvisenti <tvisenti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/06 09:13:48 by tvisenti          #+#    #+#             */
-/*   Updated: 2017/04/06 23:17:06 by tvisenti         ###   ########.fr       */
+/*   Updated: 2017/04/07 11:37:17 by tvisenti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,10 @@
 # include <iostream>
 # include "ClapTrap.hpp"
 
-class FragTrap : public ClapTrap  {
+class FragTrap : public virtual ClapTrap  {
 	public:
 		FragTrap(std::string name);
-		~FragTrap(void);
+		virtual ~FragTrap(void);
 		FragTrap(FragTrap const & src);
 
 		FragTrap&	operator=(FragTrap const & rhs);
