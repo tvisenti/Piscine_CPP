@@ -6,7 +6,7 @@
 /*   By: tvisenti <tvisenti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/11 08:31:29 by tvisenti          #+#    #+#             */
-/*   Updated: 2017/04/11 11:26:24 by tvisenti         ###   ########.fr       */
+/*   Updated: 2017/04/11 16:00:56 by tvisenti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -100,6 +100,6 @@ void				Form::beSigned(Bureaucrat& bureaucrat) {
 }
 
 std::ostream&	operator<<(std::ostream& o, const Form& rhs) {
-	o << rhs.getName() << ", form grade signed " << rhs.getGradeSign() << ", form grade executed " << rhs.getGradeExec() << ", signed " << rhs.getSigned();
+	o << rhs.getName() << ", form grade signed " << rhs.getGradeSign() << ", form grade executed " << rhs.getGradeExec() << ", signed " << rhs.getSigned() << std::endl;
 	return o;
 }
