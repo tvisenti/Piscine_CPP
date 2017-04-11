@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.cpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: tvisenti <tvisenti@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/04/11 08:30:54 by tvisenti          #+#    #+#             */
+/*   Updated: 2017/04/11 08:36:01 by tvisenti         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "Bureaucrat.hpp"
 
 int main()
@@ -43,7 +55,7 @@ std::cout << "\n-----------------------------------\n" << std::endl;
 	std::cout << "\n-----------------------------------\n" << std::endl;
 
 	try {
-		Bureaucrat	newBur4("John", -5);
+		Bureaucrat	newBur4("Jim", -5);
 		for (int i = 0; i < 20; i++) {
 			newBur4.decrementGrade();
 			std::cout << newBur4 << std::endl;

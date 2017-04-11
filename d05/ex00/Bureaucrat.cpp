@@ -1,11 +1,22 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Bureaucrat.cpp                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: tvisenti <tvisenti@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/04/11 08:30:36 by tvisenti          #+#    #+#             */
+/*   Updated: 2017/04/11 09:29:51 by tvisenti         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "Bureaucrat.hpp"
 
 Bureaucrat::GradeTooHighException::GradeTooHighException() {
 	return;
 }
 
-Bureaucrat::GradeTooHighException::GradeTooHighException(
-	const GradeTooHighException& src) {
+Bureaucrat::GradeTooHighException::GradeTooHighException(const GradeTooHighException& src) {
 	*this = src;
 	return;
 }
@@ -14,8 +25,7 @@ Bureaucrat::GradeTooHighException::~GradeTooHighException() throw() {
 	return;
 }
 
-Bureaucrat::GradeTooHighException&	Bureaucrat::GradeTooHighException::operator=(
-	const GradeTooHighException& rhs) {
+Bureaucrat::GradeTooHighException&	Bureaucrat::GradeTooHighException::operator=(const GradeTooHighException& rhs) {
 	(void)rhs;
 	return *this;
 }
@@ -28,8 +38,7 @@ Bureaucrat::GradeTooLowException::GradeTooLowException() {
 	return;
 }
 
-Bureaucrat::GradeTooLowException::GradeTooLowException(
-	const GradeTooLowException& src) {
+Bureaucrat::GradeTooLowException::GradeTooLowException(const GradeTooLowException& src) {
 	*this = src;
 	return;
 }
@@ -38,8 +47,7 @@ Bureaucrat::GradeTooLowException::~GradeTooLowException() throw() {
 	return;
 }
 
-Bureaucrat::GradeTooLowException&	Bureaucrat::GradeTooLowException::operator=(
-	const GradeTooLowException& rhs) {
+Bureaucrat::GradeTooLowException&	Bureaucrat::GradeTooLowException::operator=(const GradeTooLowException& rhs) {
 	(void)rhs;
 	return *this;
 }
