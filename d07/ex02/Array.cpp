@@ -6,7 +6,7 @@
 /*   By: tvisenti <tvisenti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/13 10:28:24 by tvisenti          #+#    #+#             */
-/*   Updated: 2017/04/13 12:00:53 by tvisenti         ###   ########.fr       */
+/*   Updated: 2017/04/13 14:03:31 by tvisenti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ Array<T> &Array<T>::operator=(Array<T> const &rhs) {
 template <typename T>
 T	&Array<T>::operator[](unsigned int i) {
 	if (i >= this->_size)
-		throw std::exception();
+		throw std::out_of_range("Out of Range");
 	return this->_array[i];
 }
 

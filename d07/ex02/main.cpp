@@ -6,7 +6,7 @@
 /*   By: tvisenti <tvisenti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/13 10:43:56 by tvisenti          #+#    #+#             */
-/*   Updated: 2017/04/13 12:08:18 by tvisenti         ###   ########.fr       */
+/*   Updated: 2017/04/13 14:10:39 by tvisenti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,9 @@
 #include "Array.cpp"
 
 int		main() {
+	std::cout << "-----------------------" << std::endl;
 	try
 	{
-		std::cout << "-----------------------" << std::endl;
 		Array<int>	tabInt(ARRAY_SIZE);
 		std::cout << "ArrayInt(size): " << tabInt.size() << std::endl;
 
@@ -28,8 +28,16 @@ int		main() {
 		for (int i = 0; i < ARRAY_SIZE; i++) {
 			std::cout << "ArrayInt[" << i << "]: " << tabInt[i] << std::endl;
 		}
+	}
+	catch (std::exception & e)
+	{
+		std::cout << e.what() << std::endl;
+	}
 
-		std::cout << "\n-----------------------" << std::endl;
+	std::cout << "\n-----------------------" << std::endl;
+
+	try
+	{
 		Array<std::string>	tabStr(ARRAY_SIZE);
 		std::cout << "ArrayStr(size): " << tabStr.size() << std::endl;
 
@@ -40,15 +48,16 @@ int		main() {
 		for (int i = 0; i < ARRAY_SIZE; i++) {
 			std::cout << "ArrayStr[" << i << "]: " << tabStr[i] << std::endl;
 		}
+	}
+	catch (std::exception & e)
+	{
+		std::cout << e.what() << std::endl;
+	}
 
-		std::cout << "\n-----------------------" << std::endl;
-		Array<char>		tabBase;
-		tabBase[0] = 'c';
-		std::cout << "ArrayBase(size): " << tabBase.size() << std::endl;
-		std::cout << "ArrayBase[" << 0 << "]: " << tabBase[0] << std::endl;
+	std::cout << "\n-----------------------" << std::endl;
 
-
-		std::cout << "\n-----------------------" << std::endl;
+	try
+	{
 		Array<char>		tabError;
 		tabError[0] = 'c';
 		std::cout << "ArrayError(size): " << tabError.size() << std::endl;
@@ -56,7 +65,22 @@ int		main() {
 	}
 	catch (std::exception & e)
 	{
-		std::cout << "Try to access to an element ouf of limit, catch with " << e.what() << std::endl;
+		std::cout << e.what() << std::endl;
 	}
+
+	std::cout << "\n-----------------------" << std::endl;
+
+	try
+	{
+		Array<char>		tabBase;
+		tabBase[0] = 'c';
+		std::cout << "ArrayBase(size): " << tabBase.size() << std::endl;
+		std::cout << "ArrayBase[" << 0 << "]: " << tabBase[0] << std::endl;
+	}
+	catch (std::exception & e)
+	{
+		std::cout << e.what() << std::endl;
+	}
+
 	return (0);
 }
